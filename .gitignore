@@ -1,0 +1,11 @@
+build/*
+Static\ analysis/
+*.pbxuser
+*.mode1v3
+
+# old skool
+.svn
+
+# osx noise
+.DS_Store
+profile

@@ -23,6 +23,7 @@
 		D4BB71231112828400FD7C7F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB71221112828400FD7C7F /* MessageUI.framework */; };
 		D4BB71241112828400FD7C7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		D4BB712D111282A400FD7C7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		D4BB717B11129DE600FD7C7F /* InvocationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BB717A11129DE600FD7C7F /* InvocationTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D4BB711D1112828400FD7C7F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D4BB711F1112828400FD7C7F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		D4BB71221112828400FD7C7F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D4BB717A11129DE600FD7C7F /* InvocationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvocationTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D4BB717911129DA600FD7C7F /* Tests */,
 				D4BB70DD111281A100FD7C7F /* Libs */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -215,6 +218,14 @@
 			name = views;
 			sourceTree = "<group>";
 		};
+		D4BB717911129DA600FD7C7F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D4BB717A11129DE600FD7C7F /* InvocationTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +316,7 @@
 			files = (
 				D4BB71191112824B00FD7C7F /* GHUnitIPhoneTestMain.m in Sources */,
 				D4BB711B1112824B00FD7C7F /* Makefile in Sources */,
+				D4BB717B11129DE600FD7C7F /* InvocationTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

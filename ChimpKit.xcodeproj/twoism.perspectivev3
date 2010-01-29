@@ -269,15 +269,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
+								<string>D4BB70DD111281A100FD7C7F</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>2</integer>
-									<integer>0</integer>
+									<integer>18</integer>
+									<integer>16</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -326,7 +326,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D4BB713B111282E800FD7C7F</string>
+										<string>D4BB7160111288DE00FD7C7F</string>
 										<key>history</key>
 										<array>
 											<string>D4BB713A111282E800FD7C7F</string>
@@ -368,7 +368,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {558, 745}}</string>
+										<string>{{10, 27}, {558, 513}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>

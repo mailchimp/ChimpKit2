@@ -374,6 +374,7 @@
 		D4BB70FB111281DA00FD7C7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = "~/Library/SDKs/httpriot-0.6.6/$(PLATFORM_NAME)$(IPHONEOS_DEPLOYMENT_TARGET).sdk";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -388,6 +389,8 @@
 					"\"$(SRCROOT)/libGHUnitIPhone3_0-0.4.13\"",
 				);
 				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-lhttpriot",
 					"-ObjC",
 					"-all_load",
 					"-framework",
@@ -404,6 +407,7 @@
 		D4BB70FC111281DA00FD7C7F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = "~/Library/SDKs/httpriot-0.6.6/$(PLATFORM_NAME)$(IPHONEOS_DEPLOYMENT_TARGET).sdk";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -418,6 +422,8 @@
 					"\"$(SRCROOT)/libGHUnitIPhone3_0-0.4.13\"",
 				);
 				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-lhttpriot",
 					"-ObjC",
 					"-all_load",
 					"-framework",

@@ -37,12 +37,3 @@ THE SOFTWARE.
 ###Credits
 christopher burnett ( github.com/twoism || twoism.posterous.com )
 
-
-
-
-
-
-
-
-
-Copyright (c) 2010 twoism. See LICENSE for details.

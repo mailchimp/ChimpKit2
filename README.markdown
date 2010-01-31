@@ -9,7 +9,7 @@ Get your API key from [http://admin.mailchimp.com/account/api](http://admin.mail
     
 ###Usage
 
-    #
+    [ChimpKit get:@"campains" onSuccess:@selector(doSomething:) delegate:self]
 
 ###License
 

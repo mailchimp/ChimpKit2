@@ -6,7 +6,7 @@
 #define LOTS_OF_ARGS "@^v@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
 @interface Mock : NSObject {}
-
++ (void)httpSend:(NSString*)httpMethod withMethod:(NSString*)method andParams:(NSDictionary*)params;
 @end
 
 @implementation Mock
@@ -15,7 +15,7 @@
 {
 
 	NSString				*selectorString = NSStringFromSelector([invocation selector]);
-	NSMutableArray	*keys						= [selectorString componentsSeparatedByString: @":"];
+	NSArray					*keys						= [selectorString componentsSeparatedByString: @":"];
 	NSString				*httpMethod			= [keys objectAtIndex:0];
 	NSArray					*paramNames			= [keys objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(1, [keys count]-2)]];
 	NSMutableArray	*values					= [[NSMutableArray alloc] init];
@@ -29,15 +29,23 @@
 		[values addObject:arg];
 	}
 		
-	NSDictionary *dict = [NSMutableDictionary dictionaryWithObjects:values forKeys:paramNames];
+	NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values forKeys:paramNames];
 	
-	NSLog(@"%@:%@ with %@",httpMethod,method,dict);
+	[self httpSend:httpMethod
+			withMethod:method 
+			 andParams:params];
 }
 
 /* Formats a generic siganture for missing methods */
 + (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
 	return [NSMethodSignature signatureWithObjCTypes:LOTS_OF_ARGS];;
+}
+
+
++ (void)httpSend:(NSString*)httpMethod withMethod:(NSString*)method andParams:(NSDictionary*)params
+{
+	NSLog(@"calling %@:%@ with %@",httpMethod,method,params);
 }
 
 @end

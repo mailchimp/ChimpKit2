@@ -11,6 +11,4 @@
 
 @interface NSObject(MethodMissing)
 
-+ (void)methodMissing:(NSString*)method withParams:(NSDictionary*)params;
-
 @end

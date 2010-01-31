@@ -31,8 +31,11 @@
                                                             forKeys:keys];
   
   if ([self respondsToSelector:@selector(methodMissing:withParams:)]) {
-    [self methodMissing:selectorString 
-             withParams:params];
+
+    [self performSelector:@selector(methodMissing:withParams:) 
+               withObject:selectorString 
+               withObject:params];
+  
   }
   
 }

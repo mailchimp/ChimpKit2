@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Debug</string>
+	<string>Project</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -298,6 +298,8 @@
 							<string>MainColumn</string>
 							<real>246</real>
 						</array>
+						<key>RubberWindowFrame</key>
+						<string>0 60 1440 818 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -308,6 +310,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -325,13 +329,13 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D498D76B1116206A00799708</string>
+										<string>D498D76F1116210800799708</string>
 										<key>history</key>
 										<array>
 											<string>D4D1164A111604960064E162</string>
 											<string>D498D74C11161FA700799708</string>
 											<string>D498D7621116205B00799708</string>
-											<string>D498D7631116205B00799708</string>
+											<string>D498D76E1116209200799708</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -346,6 +350,8 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1172, 772}}</string>
+								<key>RubberWindowFrame</key>
+								<string>0 60 1440 818 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -369,6 +375,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1172, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 60 1440 818 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -506,8 +514,6 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1440, 317}}</string>
-						<key>RubberWindowFrame</key>
-						<string>0 60 1440 818 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -582,11 +588,7 @@
 							</array>
 							<key>Frame</key>
 							<string>{{652, 0}, {788, 80}}</string>
-							<key>RubberWindowFrame</key>
-							<string>0 60 1440 818 0 0 1440 878 </string>
 						</dict>
-						<key>RubberWindowFrame</key>
-						<string>0 60 1440 818 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -650,7 +652,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D498D76C1116206A00799708</string>
 		<string>D498D6001116122700799708</string>
 		<string>D498D5F01116107600799708</string>
 		<string>/Users/twoism/dev/ruby/github/chimp_kit/ChimpKit.xcodeproj</string>

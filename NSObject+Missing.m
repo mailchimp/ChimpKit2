@@ -50,8 +50,8 @@
 		[values addObject:arg];
 	}
   
-	NSDictionary *params = [[NSMutableDictionary dictionaryWithObjects:values 
-                                                             forKeys:keys] autorelease];
+	NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values 
+                                                             forKeys:keys];
   
   if ([self respondsToSelector:@selector(methodMissing:withParams:)]) {
     
@@ -60,8 +60,6 @@
                withObject:params];
     
   }
-  
-  [values release];
 }
 
 @end

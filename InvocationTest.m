@@ -63,10 +63,17 @@
 
 @implementation InvocationTest
 
-- (void)testMethodForwarding 
+- (void)testClassMethodForwarding 
 {
 	[Mock get:@"doSomething" param1:@"foo" param2:@"bar"];
 	[Mock post:@"doSomething" param1:@"hoge" param2:@"fuga" param3:@"piyo"];
+}
+
+- (void)testInstanceForwarding 
+{
+  Mock *m = [[Mock alloc] init];
+	[m get:@"doSomething" param1:@"foo" param2:@"bar"];
+	[m post:@"doSomething" param1:@"hoge" param2:@"fuga" param3:@"piyo"];
 }
 
 @end

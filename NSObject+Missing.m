@@ -15,8 +15,31 @@
 
 + (void)forwardInvocation:(NSInvocation *)invocation
 {
-  
-	NSString				*selectorString = NSStringFromSelector([invocation selector]);
+  [self handleInvocation:invocation];
+}
+
+- (void)forwardInvocation:(NSInvocation *)invocation
+{
+  [[self class] handleInvocation:invocation];
+}
+
++ (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
+{
+	return [self formatSignature];
+}
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
+{
+	return [[self class] formatSignature];
+}
+
++ (NSMethodSignature*)formatSignature
+{
+  return [NSMethodSignature signatureWithObjCTypes:LOTS_OF_ARGS];
+}
+
++ (void)handleInvocation:(NSInvocation*)invocation
+{
+  NSString				*selectorString = NSStringFromSelector([invocation selector]);
 	NSArray					*parts					= [selectorString componentsSeparatedByString: @":"];
   NSArray					*keys           = [parts objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [parts count]-1)]];
 	NSMutableArray	*values					= [[NSMutableArray alloc] init];
@@ -27,24 +50,18 @@
 		[values addObject:arg];
 	}
   
-	NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values 
-                                                            forKeys:keys];
+	NSDictionary *params = [[NSMutableDictionary dictionaryWithObjects:values 
+                                                             forKeys:keys] autorelease];
   
   if ([self respondsToSelector:@selector(methodMissing:withParams:)]) {
-
+    
     [self performSelector:@selector(methodMissing:withParams:) 
                withObject:selectorString 
                withObject:params];
-  
+    
   }
   
+  [values release];
 }
-
-/* Formats a generic siganture for missing methods */
-+ (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
-{
-	return [NSMethodSignature signatureWithObjCTypes:LOTS_OF_ARGS];;
-}
-
 
 @end

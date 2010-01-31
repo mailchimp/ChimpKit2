@@ -10,5 +10,6 @@
 
 
 @interface NSObject(MethodMissing)
-
++ (NSMethodSignature*)formatSignature;
++ (void)handleInvocation:(NSInvocation*)invocation;
 @end

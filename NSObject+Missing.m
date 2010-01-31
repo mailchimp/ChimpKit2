@@ -26,14 +26,14 @@
 
 + (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
-	return [self formatSignature];
+	return [self formatDynamicSignature];
 }
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
-	return [[self class] formatSignature];
+	return [[self class] formatDynamicSignature];
 }
 
-+ (NSMethodSignature*)formatSignature
++ (NSMethodSignature*)formatDynamicSignature
 {
   return [NSMethodSignature signatureWithObjCTypes:LOTS_OF_ARGS];
 }

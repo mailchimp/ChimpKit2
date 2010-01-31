@@ -5,7 +5,7 @@ API wrapper for the [mailchimp.com](http://mailchimp.com/api "MailChimp API") AP
 
 ###Install & Setup
     
-    #
+Get your API key from [http://admin.mailchimp.com/account/api](http://admin.mailchimp.com/account/api/ "MailChimp API").
     
 ###Usage
 

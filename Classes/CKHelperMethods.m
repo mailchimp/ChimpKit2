@@ -11,4 +11,27 @@
 
 @implementation CKHelperMethods
 
++ (void)creeateFolder:(NSString*)name
+{
+  
+}
++ (void)generateText:(NSString*)type 
+         fromContent:(NSString*)content
+{
+  
+}
++ (void)getAccountDetails
+{
+  
+}
++ (void)inlineCss:(NSString*)html 
+         stripCss:(BOOL)strip
+{
+  
+}
++ (void)ping
+{
+  
+}
+
 @end

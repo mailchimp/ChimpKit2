@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ChimpKit.h"
 
-
-@interface CKHelperMethods : NSObject {
+@interface CKHelperMethods : ChimpKit {
 
 }
-
++ (void)creeateFolder:(NSString*)name;
++ (void)generateText:(NSString*)type fromContent:(NSString*)content;
++ (void)getAccountDetails;
++ (void)inlineCss:(NSString*)html stripCss:(BOOL)strip;
++ (void)ping;
 @end

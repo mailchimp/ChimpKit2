@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ChimpKit.h"
 
-
-@interface CKList : NSObject {
+@interface CKList : ChimpKit {
 
 }
 

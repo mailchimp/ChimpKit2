@@ -28,6 +28,7 @@
 		D4C97DC11117D50C0071E2E6 /* CKList.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC01117D50C0071E2E6 /* CKList.m */; };
 		D4C97DC51117D5730071E2E6 /* CKMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC41117D5730071E2E6 /* CKMember.m */; };
 		D4C97DC81117D5B00071E2E6 /* CKHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */; };
+		D4C97DCB1117D7AD0071E2E6 /* ChimpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */; };
 		D4D1162C1115436E0064E162 /* NSObject+Missing.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1162B1115436E0064E162 /* NSObject+Missing.m */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		D4C97DC41117D5730071E2E6 /* CKMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMember.m; sourceTree = "<group>"; };
 		D4C97DC61117D5B00071E2E6 /* CKHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHelperMethods.h; sourceTree = "<group>"; };
 		D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHelperMethods.m; sourceTree = "<group>"; };
+		D4C97DC91117D7AD0071E2E6 /* ChimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChimpKit.h; sourceTree = "<group>"; };
+		D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChimpKit.m; sourceTree = "<group>"; };
 		D4D1162A1115436E0064E162 /* NSObject+Missing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Missing.h"; sourceTree = "<group>"; };
 		D4D1162B1115436E0064E162 /* NSObject+Missing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Missing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +227,8 @@
 				D4C97DC41117D5730071E2E6 /* CKMember.m */,
 				D4C97DC61117D5B00071E2E6 /* CKHelperMethods.h */,
 				D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */,
+				D4C97DC91117D7AD0071E2E6 /* ChimpKit.h */,
+				D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				D4C97DC11117D50C0071E2E6 /* CKList.m in Sources */,
 				D4C97DC51117D5730071E2E6 /* CKMember.m in Sources */,
 				D4C97DC81117D5B00071E2E6 /* CKHelperMethods.m in Sources */,
+				D4C97DCB1117D7AD0071E2E6 /* ChimpKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

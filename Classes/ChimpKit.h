@@ -1,5 +1,5 @@
 //
-//  CKMember.h
+//  ChimpKit.h
 //  ChimpKit
 //
 //  Created by Christopher Burnett on 2/1/10.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ChimpKit.h"
 
-@interface CKMember : ChimpKit {
+@interface ChimpKit : ChimpKit {
 
 }
 

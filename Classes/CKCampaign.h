@@ -10,7 +10,36 @@
 
 
 @interface CKCampaign : NSObject {
-
+  
 }
+
++ (void)content:(NSString*)campaignId;
+
++ (void)createCampaign:(NSString*)type 
+   withOptions:(NSDictionary*)options 
+       content:(NSString*)content 
+segmentOptions:(NSDictionary*)segOptions 
+   typeOptions:(NSDictionary*)typeOpts;
+
++ (void)update:(NSString*)campaingId 
+     fieldName:(NSString*)name 
+    fieldValue:(NSString*)value;
+
++ (void)deleteCampaign:(NSString*)campaignId;
++ (void)folders:(NSString*)campaignId;
++ (void)pause:(NSString*)campaignId;
++ (void)replicate:(NSString*)campaignId;
++ (void)resume:(NSString*)campaignId;
++ (void)sendNow:(NSString*)campaignId;
++ (void)unschedule:(NSString*)campaignId;
++ (void)templates;
+
++ (void)schedule:(NSString*)campaignId 
+         forTime:(NSString*)time 
+         andTime:(NSString*)timeb;
+
++ (void)findAllfilteredBy:(NSDictionary*)filters 
+               startingAt:(NSNumber*)start 
+                withLimit:(NSNumber*)limit;
 
 @end

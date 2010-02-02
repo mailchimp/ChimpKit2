@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ChimpKit.h"
 
-@interface ChimpKit : ChimpKit {
+@interface ChimpKit : NSObject {
 
 }
 

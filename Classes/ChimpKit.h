@@ -11,8 +11,12 @@
 
 @interface ChimpKit : NSObject {
 	id delegate;
+	NSOperationQueue *requestQueue;
 }
 
 @property (nonatomic, readwrite) id delegate;
+@property (nonatomic,retain) NSOperationQueue *requestQueue;
+
+
 
 @end

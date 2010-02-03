@@ -26,11 +26,11 @@
 
 + (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
-	return [self formatDynamicSignature];
+  return [self formatDynamicSignature];
 }
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
-	return [[self class] formatDynamicSignature];
+  return [[self class] formatDynamicSignature];
 }
 
 + (NSMethodSignature*)formatDynamicSignature
@@ -40,18 +40,18 @@
 
 + (void)handleInvocation:(NSInvocation*)invocation
 {
-  NSString				*selectorString = NSStringFromSelector([invocation selector]);
-	NSArray					*parts					= [selectorString componentsSeparatedByString: @":"];
-  NSArray					*keys           = [parts objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [parts count]-1)]];
-	NSMutableArray	*values					= [[NSMutableArray alloc] init];
-	
-	for (int i=0; i<[keys count]; i++) {
-		id arg;
-		[invocation getArgument:&arg atIndex:i+2];
-		[values addObject:arg];
-	}
+  NSString        *selectorString = NSStringFromSelector([invocation selector]);
+  NSArray         *parts          = [selectorString componentsSeparatedByString: @":"];
+  NSArray         *keys           = [parts objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [parts count]-1)]];
+  NSMutableArray  *values         = [[NSMutableArray alloc] init];
   
-	NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values 
+  for (int i=0; i<[keys count]; i++) {
+    id arg;
+    [invocation getArgument:&arg atIndex:i+2];
+    [values addObject:arg];
+  }
+  
+  NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values 
                                                              forKeys:keys];
   
   if ([self respondsToSelector:@selector(methodMissing:withParams:)]) {

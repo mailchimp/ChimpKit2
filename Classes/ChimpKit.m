@@ -11,6 +11,6 @@
 
 @implementation ChimpKit
 
-@synthesize delegate;
+@synthesize delegate, requestQueue;
 
 @end

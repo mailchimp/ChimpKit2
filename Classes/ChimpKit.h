@@ -10,7 +10,9 @@
 #import "ChimpKit.h"
 
 @interface ChimpKit : NSObject {
-
+	id delegate;
 }
+
+@property (nonatomic, readwrite) id delegate;
 
 @end

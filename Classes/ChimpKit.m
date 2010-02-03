@@ -11,4 +11,6 @@
 
 @implementation ChimpKit
 
+@synthesize delegate;
+
 @end

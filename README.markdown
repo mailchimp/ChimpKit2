@@ -13,7 +13,12 @@ Get your API key from [http://admin.mailchimp.com/account/api](http://admin.mail
 	
 	Under the hood API communication will be handled in ChimpKit.m through the following DSL:
 	
-	[ChimpKit get:@"<api_method>" param:@"value" other_param:@"value" onSuccess:@selector(doSomething:) onFailure:@selector(doSomthingElse:) delegate:self]
+    [ChimpKit get:@"<api_method>" 
+            param:@"value" 
+      other_param:@"value" 
+        onSuccess:@selector(doSomething:) 
+        onFailure:@selector(doSomthingElse:) 
+         delegate:self];
 
 ###License
 

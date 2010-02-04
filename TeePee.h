@@ -28,8 +28,11 @@
 - (id)initWithDelegate:(id)aDelegate;
 - (void)parseParamDefaults:(NSDictionary*)params;
 - (void)paramsForRequest:(NSMutableDictionary*)params;
+- (void)paramStringForRequest:(NSMutableDictionary*)params;
 - (void)requestForPath:(NSString*)path;
 - (void)dispatchRequest:(NSString*)signature 
              withParams:(NSDictionary*)params;
-
+- (void)addDictionaryParams:(NSDictionary*)dict 
+                     forKey:(NSString*)key;
+- (void)stripParams:(NSMutableDictionary*)params;
 @end

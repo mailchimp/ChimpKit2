@@ -9,6 +9,8 @@
 #import "TeePee.h"
 #import "NSObject+Missing.h"
 
+#define TEE_PEE_KEYS [NSArray arrayWithObjects:@"delegate",@"onSuccess",@"onFailure",@"get",@"post",@"put",@"delete",nil]
+
 @implementation TeePee
 
 @synthesize delegate, requestQueue, onSuccess, onFailure, request;
@@ -48,27 +50,49 @@
   [[self requestQueue] addOperation:self.request];
 }
 
+- (void)addDictionaryParams:(NSDictionary*)dict 
+                     forKey:(NSString*)key
+{
+  for (id paramKey in dict) {
+    NSString *name  = [NSString stringWithFormat:@"%@[%@]",key,paramKey];
+    NSString *value = [[dict objectForKey:paramKey] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    [self.request setPostValue:value forKey:name];
+  }
+}
+
+- (void)addArrayParams:(NSArray *)array 
+                forKey:(NSString *)key
+{
+  for (int c = 0; c<[array count]; c++) {
+    NSString *name    = [NSString stringWithFormat:@"%@[%d]",key,c];
+    NSString *value   = [[array objectAtIndex:c] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    [self.request setPostValue:value forKey:name];
+  }
+}
+
+- (void)stripParams:(NSMutableDictionary*)params
+{
+  [params removeObjectsForKeys:TEE_PEE_KEYS];
+}
+
 - (void)paramsForRequest:(NSMutableDictionary*)params
 {
-	[params removeObjectsForKeys:[NSArray arrayWithObjects:@"delegate",@"onSuccess",@"onFailure",@"get",nil]];
+	[self stripParams:params];
 	for (id key in params) {
     id param = [params valueForKey:key];
     if ([param respondsToSelector:@selector(objectForKey:)]) {
-      for (id paramKey in param) {
-        NSString *name  = [NSString stringWithFormat:@"%@[%@]",key,paramKey];
-        NSString *value = [[param objectForKey:paramKey] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-        [self.request setPostValue:value forKey:name];
-      }
+      [self addDictionaryParams:param forKey:key];
     }else if ([param respondsToSelector:@selector(objectAtIndex:)]){
-      for (int c = 0; c<[param count]; c++) {
-        NSString *name    = [NSString stringWithFormat:@"%@[%d]",key,c];
-        NSString *value   = [[param objectAtIndex:c] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-        [self.request setPostValue:value forKey:name];
-      }
+      [self addArrayParams:param forKey:key];
     }else{
       [self.request setPostValue:[params valueForKey:key] forKey:key];
     }
 	}
+}
+
+- (void)paramStringForRequest:(NSMutableDictionary*)params
+{
+  
 }
 
 - (void)requestForPath:(NSString*)path
@@ -77,7 +101,7 @@
   	[self setRequestQueue:[[[NSOperationQueue alloc] init] autorelease]];
   }
   
-  NSURL *url 		= [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",@"http://localhost:9393",@"/"]];
+  NSURL *url 		= [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",@"http://localhost:9393",path]];
   self.request 	= [ASIFormDataRequest requestWithURL:url];
   
   [self.request setDelegate:self.delegate];

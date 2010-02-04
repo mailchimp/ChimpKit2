@@ -110,10 +110,13 @@
 	for (id key in params) {
     id param = [params valueForKey:key];
     if ([param respondsToSelector:@selector(objectForKey:)]) {
+      // handle dictionary
       [self addDictionaryParams:param forKey:key];
     }else if ([param respondsToSelector:@selector(objectAtIndex:)]){
+      // handle array
       [self addArrayParams:param forKey:key];
     }else{
+      // handle string
       [self.request setPostValue:[params valueForKey:key] forKey:key];
     }
 	}
@@ -126,10 +129,13 @@
   for (id key in params) {
     id param = [params valueForKey:key];
     if ([param respondsToSelector:@selector(objectForKey:)]) {
+      // handle dictionary
       queryString = [queryString stringByAppendingString:[self concatDictionaryParams:param forKey:key]];
     }else if ([param respondsToSelector:@selector(objectAtIndex:)]){
+      // handle array
       queryString = [queryString stringByAppendingString:[self concatArrayParams:param forKey:key]];
     }else{
+      // handle string
       NSString *value = [[params objectForKey:key] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
       queryString = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",key,value]];
     }
@@ -144,8 +150,9 @@
   	[self setRequestQueue:[[[NSOperationQueue alloc] init] autorelease]];
   }
   
-  NSURL *url 		= [NSURL URLWithString:[NSString stringWithFormat:@"%@%@?%@",self.baseUri,path,[self paramStringForRequest:[params mutableCopy]]]];
-  self.request 	= [ASIFormDataRequest requestWithURL:url];
+  NSString  *urlString  = [NSString stringWithFormat:@"%@%@?%@",self.baseUri,path,[self paramStringForRequest:[params mutableCopy]]];
+  NSURL     *url        = [NSURL URLWithString:urlString];
+  self.request          = [ASIFormDataRequest requestWithURL:url];
   
   [self.request setDelegate:self];
   [self.request setDidFinishSelector:@selector(tp_requestDidLoad:)];

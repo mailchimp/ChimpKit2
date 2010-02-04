@@ -268,6 +268,8 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>D4D11628111543170064E162</string>
+								<string>D4C8A84C111A6E68009CFDFF</string>
+								<string>D4C8A84F111A6E89009CFDFF</string>
 								<string>D4BB717911129DA600FD7C7F</string>
 								<string>D4BB70DD111281A100FD7C7F</string>
 								<string>080E96DDFE201D6D7F000001</string>
@@ -276,8 +278,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>13</integer>
 									<integer>11</integer>
-									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -329,16 +331,17 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D4C8A815111A6BF9009CFDFF</string>
+										<string>D4C8A8FE111A7A4E009CFDFF</string>
 										<key>history</key>
 										<array>
 											<string>D4BF2249111A3A6200B7A509</string>
 											<string>D4C8A6E5111A498A009CFDFF</string>
 											<string>D4C8A76A111A4F1D009CFDFF</string>
 											<string>D4C8A7B1111A5229009CFDFF</string>
-											<string>D4C8A7DF111A692E009CFDFF</string>
-											<string>D4C8A7E0111A692E009CFDFF</string>
-											<string>D4C8A814111A6BF6009CFDFF</string>
+											<string>D4C8A853111A6F4E009CFDFF</string>
+											<string>D4C8A8E1111A797B009CFDFF</string>
+											<string>D4C8A8F9111A7A44009CFDFF</string>
+											<string>D4C8A8FA111A7A44009CFDFF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -655,6 +658,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>D4C8A8FF111A7A4E009CFDFF</string>
 		<string>D4C8A7A3111A51C0009CFDFF</string>
 		<string>D4C8A79E111A5187009CFDFF</string>
 		<string>/Users/twoism/dev/ruby/github/chimp_kit/ChimpKit.xcodeproj</string>

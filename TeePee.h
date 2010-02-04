@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ASIFormDataRequest.h"
 #import "NSObject+Missing.h"
+#import "JSON.h"
 
 @interface TeePee : NSObject 
 {
@@ -30,12 +31,19 @@
 - (id)initWithDelegate:(id)aDelegate;
 - (void)parseParamDefaults:(NSDictionary*)params;
 - (void)paramsForRequest:(NSMutableDictionary*)params;
-- (void)paramStringForRequest:(NSMutableDictionary*)params;
-- (void)requestForPath:(NSString*)path;
+- (NSString*)paramStringForRequest:(NSMutableDictionary*)params;
+- (void)requestForPath:(NSString*)path withParams:(NSDictionary*)params;
 - (void)dispatchRequest:(NSString*)signature 
              withParams:(NSDictionary*)params;
 - (void)addDictionaryParams:(NSDictionary*)dict 
                      forKey:(NSString*)key;
+- (void)addArrayParams:(NSArray*)array 
+                     forKey:(NSString*)key;
+- (NSString*)concatDictionaryParams:(NSDictionary*)dict 
+                        forKey:(NSString*)key;
+- (NSString*)concatArrayParams:(NSArray*)array 
+                   forKey:(NSString*)key;
 - (void)stripParams:(NSMutableDictionary*)params;
-
+- (void)tp_requestDidLoad:(ASIFormDataRequest*)request;
+- (void)tp_requestDidFail:(ASIFormDataRequest*)request;
 @end

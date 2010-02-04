@@ -3,7 +3,7 @@ require "sinatra"
 require "ruby-growl"
 require "json"
 
-post "/" do
+get "/" do
   g = Growl.new "localhost", "ruby-growl",
                 ["ruby-growl Notification"]
   g.notify "ruby-growl Notification", "", params.inspect

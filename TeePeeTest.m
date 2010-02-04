@@ -40,9 +40,9 @@
   [tp put:@"/" bar:opts onSuccess:@"didLoad:" onFailure:@"didFail:"];
 }
 
-- (void)didLoad:(ASIHTTPRequest *)request
+- (void)didLoad:(NSDictionary*)data
 {
-  NSLog(@"made it %@",[request responseString]);
+  NSLog(@"made it %@",data);
 }
 
 - (void)didFail:(ASIHTTPRequest *)request

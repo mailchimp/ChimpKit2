@@ -279,10 +279,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>3</integer>
-									<integer>2</integer>
-									<integer>1</integer>
+									<integer>17</integer>
+									<integer>15</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -322,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D449CAD1111281270045CBAC</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TeePee.m</string>
+								<string>TeePeeTest.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D449CAD2111281270045CBAC</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TeePee.m</string>
+										<string>TeePeeTest.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D44B8469111B27A400CD8862</string>
+										<string>D48E8B7F111B2927008043CD</string>
 										<key>history</key>
 										<array>
 											<string>D4C8A76A111A4F1D009CFDFF</string>
@@ -350,8 +348,8 @@
 											<string>D44B841B111B24CA00CD8862</string>
 											<string>D44B841C111B24CA00CD8862</string>
 											<string>D44B8445111B25A900CD8862</string>
-											<string>D44B8450111B25F200CD8862</string>
-											<string>D44B8466111B26A200CD8862</string>
+											<string>D44B8473111B28C600CD8862</string>
+											<string>D44B8475111B28C600CD8862</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -391,6 +389,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1172, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 60 1440 818 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -444,9 +444,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1172, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 60 1440 818 0 0 1440 878 </string>
+										<string>{{0, 0}, {568, 405}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -474,11 +472,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D44B8420111B24CA00CD8862</string>
+				<string>D48E8B62111B28D1008043CD</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>D44B8421111B24CA00CD8862</string>
+				<string>D48E8B63111B28D1008043CD</string>
 				<string>D449CAD1111281270045CBAC</string>
-				<string>D44B8422111B24CA00CD8862</string>
+				<string>D48E8B64111B28D1008043CD</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -627,14 +625,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D44B8423111B24CA00CD8862</string>
+				<string>D48E8B68111B28E2008043CD</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>D44B8424111B24CA00CD8862</string>
-				<string>D44B8425111B24CA00CD8862</string>
-				<string>D44B8426111B24CA00CD8862</string>
-				<string>D44B8427111B24CA00CD8862</string>
-				<string>D449CAD1111281270045CBAC</string>
+				<string>D48E8B69111B28E2008043CD</string>
+				<string>D48E8B6A111B28E2008043CD</string>
+				<string>D48E8B6B111B28E2008043CD</string>
+				<string>D48E8B6C111B28E2008043CD</string>
+				<string>D48E8B6D111B28E2008043CD</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -668,9 +666,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D44B846A111B27A400CD8862</string>
-		<string>D44B8440111B259500CD8862</string>
-		<string>D44B8429111B24CA00CD8862</string>
+		<string>D48E8B80111B2927008043CD</string>
+		<string>D48E8B74111B2900008043CD</string>
+		<string>D48E8B6F111B28E2008043CD</string>
 		<string>/Users/twoism/dev/ruby/github/chimp_kit/ChimpKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

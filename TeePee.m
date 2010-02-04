@@ -8,17 +8,19 @@
 
 #import "TeePee.h"
 #import "NSObject+Missing.h"
+#import "NSDictionary+Parameterize.h"
 
 #define TEE_PEE_KEYS [NSArray arrayWithObjects:@"delegate",@"onSuccess",@"onFailure",@"get",@"post",@"put",@"delete",nil]
 
 @implementation TeePee
 
-@synthesize delegate, requestQueue, onSuccess, onFailure, request, baseUri;
+@synthesize delegate, requestQueue, onSuccess, onFailure, request, baseUri, requestParams;
 
 - (id)initWithDelegate:(id)aDelegate
 {
 	self = [super init];
 	if (self != nil) {
+    self.requestParams = [[NSMutableDictionary alloc] init];
 		self.delegate = aDelegate;
 	}
 	return self;
@@ -54,49 +56,11 @@
   
 }
 
-- (void)addDictionaryParams:(NSDictionary*)dict 
-                     forKey:(NSString*)key
+- (void)addParamsToRequest
 {
-  for (id paramKey in dict) {
-    NSString *name  = [NSString stringWithFormat:@"%@[%@]",key,paramKey];
-    NSString *value = [[dict objectForKey:paramKey] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-    [self.request setPostValue:value forKey:name];
+  for (id key in self.requestParams) {
+    [self.request setPostValue:[self.requestParams objectForKey:key] forKey:key];
   }
-}
-
-- (void)addArrayParams:(NSArray *)array 
-                forKey:(NSString *)key
-{
-  for (int c = 0; c<[array count]; c++) {
-    NSString *name    = [NSString stringWithFormat:@"%@[%d]",key,c];
-    NSString *value   = [[array objectAtIndex:c] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-    [self.request setPostValue:value forKey:name];
-  }
-}
-
-- (NSString*)concatDictionaryParams:(NSDictionary*)dict 
-                        forKey:(NSString*)key
-{
-  NSString *queryString = @"";
-  for (id paramKey in dict) {
-    NSString *name  = [NSString stringWithFormat:@"%@[%@]",key,paramKey];
-    NSString *value = [[dict objectForKey:paramKey] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-    
-    queryString = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",name,value]];
-  }
-  return queryString;
-}
-- (NSString*)concatArrayParams:(NSArray*)array 
-                   forKey:(NSString*)key
-{
-  NSString *queryString = @"";
-  for (int c = 0; c<[array count]; c++) {
-    NSString *name    = [NSString stringWithFormat:@"%@[%d]",key,c];
-    NSString *value   = [[array objectAtIndex:c] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-    
-    queryString = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",name,value]];
-  }
-  return queryString;
 }
 
 - (void)stripParams:(NSMutableDictionary*)params
@@ -109,17 +73,13 @@
 	[self stripParams:params];
 	for (id key in params) {
     id param = [params valueForKey:key];
-    if ([param respondsToSelector:@selector(objectForKey:)]) {
-      // handle dictionary
-      [self addDictionaryParams:param forKey:key];
-    }else if ([param respondsToSelector:@selector(objectAtIndex:)]){
-      // handle array
-      [self addArrayParams:param forKey:key];
+    if ([param respondsToSelector:@selector(objectForKey:)] || [param respondsToSelector:@selector(objectAtIndex:)]) {
+      [self.requestParams addEntriesFromDictionary:[param parameterizeWithScope:key]];
     }else{
-      // handle string
-      [self.request setPostValue:[params valueForKey:key] forKey:key];
+      [self.requestParams setObject:[params valueForKey:key] forKey:key];
     }
 	}
+  [self addParamsToRequest];
 }
 
 - (NSString*)paramStringForRequest:(NSMutableDictionary*)params
@@ -128,14 +88,9 @@
   [self stripParams:params];
   for (id key in params) {
     id param = [params valueForKey:key];
-    if ([param respondsToSelector:@selector(objectForKey:)]) {
-      // handle dictionary
-      queryString = [queryString stringByAppendingString:[self concatDictionaryParams:param forKey:key]];
-    }else if ([param respondsToSelector:@selector(objectAtIndex:)]){
-      // handle array
-      queryString = [queryString stringByAppendingString:[self concatArrayParams:param forKey:key]];
+    if ([param respondsToSelector:@selector(objectForKey:)] || [param respondsToSelector:@selector(objectAtIndex:)]) {
+      queryString = [queryString stringByAppendingString:[param toQueryStringWithScope:key]];
     }else{
-      // handle string
       NSString *value = [[params objectForKey:key] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
       queryString = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",key,value]];
     }
@@ -150,7 +105,9 @@
   	[self setRequestQueue:[[[NSOperationQueue alloc] init] autorelease]];
   }
   
-  NSString  *urlString  = [NSString stringWithFormat:@"%@%@?%@",self.baseUri,path,[self paramStringForRequest:[params mutableCopy]]];
+  [self paramsForRequest:[params mutableCopy]];
+  
+  NSString  *urlString  = [NSString stringWithFormat:@"%@%@?%@",self.baseUri,path,[self paramStringForRequest:self.requestParams]];
   NSURL     *url        = [NSURL URLWithString:urlString];
   self.request          = [ASIFormDataRequest requestWithURL:url];
   

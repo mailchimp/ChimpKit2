@@ -8,15 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ChimpKit.h"
+#import "TeePee.h"
 
-@interface ChimpKit : NSObject {
-	id delegate;
-	NSOperationQueue *requestQueue;
-}
-
-@property (nonatomic, readwrite) id delegate;
-@property (nonatomic,retain) NSOperationQueue *requestQueue;
-
-
+@interface ChimpKit : TeePee { }
 
 @end

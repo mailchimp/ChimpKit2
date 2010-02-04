@@ -53,6 +53,8 @@
 		D4C8A849111A6E09009CFDFF /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A840111A6E09009CFDFF /* SBJsonBase.m */; };
 		D4C8A84A111A6E09009CFDFF /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A842111A6E09009CFDFF /* SBJsonParser.m */; };
 		D4C8A84B111A6E09009CFDFF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A844111A6E09009CFDFF /* SBJsonWriter.m */; };
+		D4C8A945111B1ABC009CFDFF /* NSDictionary+Parameterize.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A944111B1ABC009CFDFF /* NSDictionary+Parameterize.m */; };
+		D4C8A948111B1B13009CFDFF /* NSArray+Parametrize.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A947111B1B13009CFDFF /* NSArray+Parametrize.m */; };
 		D4C97DBE1117D45D0071E2E6 /* CKCampaign.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DBD1117D45D0071E2E6 /* CKCampaign.m */; };
 		D4C97DC11117D50C0071E2E6 /* CKList.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC01117D50C0071E2E6 /* CKList.m */; };
 		D4C97DC51117D5730071E2E6 /* CKMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC41117D5730071E2E6 /* CKMember.m */; };
@@ -129,6 +131,10 @@
 		D4C8A842111A6E09009CFDFF /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		D4C8A843111A6E09009CFDFF /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		D4C8A844111A6E09009CFDFF /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		D4C8A943111B1ABC009CFDFF /* NSDictionary+Parameterize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Parameterize.h"; sourceTree = "<group>"; };
+		D4C8A944111B1ABC009CFDFF /* NSDictionary+Parameterize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Parameterize.m"; sourceTree = "<group>"; };
+		D4C8A946111B1B13009CFDFF /* NSArray+Parametrize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Parametrize.h"; sourceTree = "<group>"; };
+		D4C8A947111B1B13009CFDFF /* NSArray+Parametrize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Parametrize.m"; sourceTree = "<group>"; };
 		D4C97DBC1117D45D0071E2E6 /* CKCampaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCampaign.h; sourceTree = "<group>"; };
 		D4C97DBD1117D45D0071E2E6 /* CKCampaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCampaign.m; sourceTree = "<group>"; };
 		D4C97DBF1117D50C0071E2E6 /* CKList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKList.h; sourceTree = "<group>"; };
@@ -390,8 +396,14 @@
 		D4C8A84F111A6E89009CFDFF /* TeePee */ = {
 			isa = PBXGroup;
 			children = (
+				D4D1162A1115436E0064E162 /* NSObject+Missing.h */,
+				D4D1162B1115436E0064E162 /* NSObject+Missing.m */,
 				D4BF21E7111A377700B7A509 /* TeePee.h */,
 				D4BF21E8111A377700B7A509 /* TeePee.m */,
+				D4C8A943111B1ABC009CFDFF /* NSDictionary+Parameterize.h */,
+				D4C8A944111B1ABC009CFDFF /* NSDictionary+Parameterize.m */,
+				D4C8A946111B1B13009CFDFF /* NSArray+Parametrize.h */,
+				D4C8A947111B1B13009CFDFF /* NSArray+Parametrize.m */,
 			);
 			name = TeePee;
 			sourceTree = "<group>";
@@ -400,8 +412,6 @@
 			isa = PBXGroup;
 			children = (
 				D4C8A84C111A6E68009CFDFF /* vendor */,
-				D4D1162A1115436E0064E162 /* NSObject+Missing.h */,
-				D4D1162B1115436E0064E162 /* NSObject+Missing.m */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -527,6 +537,8 @@
 				D4C8A849111A6E09009CFDFF /* SBJsonBase.m in Sources */,
 				D4C8A84A111A6E09009CFDFF /* SBJsonParser.m in Sources */,
 				D4C8A84B111A6E09009CFDFF /* SBJsonWriter.m in Sources */,
+				D4C8A945111B1ABC009CFDFF /* NSDictionary+Parameterize.m in Sources */,
+				D4C8A948111B1B13009CFDFF /* NSArray+Parametrize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

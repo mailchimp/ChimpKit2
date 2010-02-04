@@ -19,6 +19,7 @@
 	NSOperationQueue    *requestQueue;
 	ASIFormDataRequest 	*request;
   NSString            *baseUri;
+  NSMutableDictionary *requestParams;
 }
 
 @property (assign,readwrite)    id delegate;
@@ -27,9 +28,11 @@
 @property (nonatomic,retain) 		NSOperationQueue    *requestQueue;
 @property (nonatomic,retain) 		ASIFormDataRequest 	*request;
 @property (nonatomic,retain) 		NSString            *baseUri;
+@property (nonatomic,retain) 		NSMutableDictionary *requestParams;
 
 - (id)initWithDelegate:(id)aDelegate;
 - (void)parseParamDefaults:(NSDictionary*)params;
+- (void)addParamsToRequest;
 - (void)paramsForRequest:(NSMutableDictionary*)params;
 - (NSString*)paramStringForRequest:(NSMutableDictionary*)params;
 - (void)requestForPath:(NSString*)path withParams:(NSDictionary*)params;

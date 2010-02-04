@@ -23,11 +23,11 @@
   tp.baseUri  = TEST_SERVER;
 }
 
-- (void)testWithStrings
-{
-  [tp get:@"/" foo:@"bar" bar:@"hoge" onSuccess:@"didLoad:" onFailure:@"didFail:"];
-}
-
+//- (void)testWithStrings
+//{
+//  [tp get:@"/" foo:@"bar" bar:@"hoge" onSuccess:@"didLoad:" onFailure:@"didFail:"];
+//}
+//
 - (void)testWithArray
 {
   NSArray *opts = [NSArray arrayWithObjects:@"one",@"two",nil];
@@ -37,7 +37,7 @@
 - (void)testWithDictionary
 {
   NSDictionary *opts  = [NSDictionary dictionaryWithObjectsAndKeys:@"one",@"foo",@"two",@"bar",nil];
-  [tp put:@"/" bar:opts onSuccess:@"didLoad:" onFailure:@"didFail:"];
+  [tp get:@"/" bar:opts onSuccess:@"didLoad:" onFailure:@"didFail:"];
 }
 
 - (void)didLoad:(NSDictionary*)data

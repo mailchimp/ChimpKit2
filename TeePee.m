@@ -38,33 +38,21 @@
 - (void)dispatchRequest:(NSString*)signature 
 						 withParams:(NSDictionary*)params
 {
-	[self requestForPath:[params objectForKey:@"get"]];
+	
+  NSString *httpMethod = [[signature componentsSeparatedByString:@":"] objectAtIndex:0];
+  
+  [self requestForPath:[params objectForKey:httpMethod]];
   [self paramsForRequest:[params mutableCopy]];
-  [self.request setRequestMethod:@"GET"];
+  
+  [self.request setRequestMethod:[httpMethod uppercaseString]];
   [[self requestQueue] addOperation:self.request];
-}
-
-- (NSDictionary*)parameterizeKey:(NSString*)key 
-                      withObject:(id)obj
-{
-	NSDictionary *param;
-	if ([obj respondsToSelector:@selector(objectForKey:)]) {
-		// is dictionary
-	}else if ([obj respondsToSelector:@selector(objectAtIndex:)]){
-		// is array
-	}else{
-		// treat as string
-	}
-	return param;
 }
 
 - (void)paramsForRequest:(NSMutableDictionary*)params
 {
 	[params removeObjectsForKeys:[NSArray arrayWithObjects:@"delegate",@"onSuccess",@"onFailure",@"get",nil]];
 	for (id key in params) {
-    
     id param = [params valueForKey:key];
-    
     if ([param respondsToSelector:@selector(objectForKey:)]) {
       for (id paramKey in param) {
         NSString *name  = [NSString stringWithFormat:@"%@[%@]",key,paramKey];

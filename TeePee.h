@@ -31,8 +31,5 @@
 - (void)requestForPath:(NSString*)path;
 - (void)dispatchRequest:(NSString*)signature 
              withParams:(NSDictionary*)params;
-- (NSDictionary*)parameterizeKey:(NSString*)key 
-						          withObject:(id)obj;
-
 
 @end

@@ -61,6 +61,7 @@
                withObject:params];
     
   }
+  [values release];
 }
 
 
@@ -87,6 +88,7 @@
                withObject:params];
     
   }
+  [values release];
 }
 
 @end

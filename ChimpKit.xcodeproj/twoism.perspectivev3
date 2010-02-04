@@ -319,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D449CAD1111281270045CBAC</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TeePeeTest.m</string>
+								<string>InvocationTest.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,21 +327,21 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D449CAD2111281270045CBAC</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TeePeeTest.m</string>
+										<string>InvocationTest.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D4C8A8FE111A7A4E009CFDFF</string>
+										<string>D4C8A93B111A7E72009CFDFF</string>
 										<key>history</key>
 										<array>
 											<string>D4BF2249111A3A6200B7A509</string>
-											<string>D4C8A6E5111A498A009CFDFF</string>
 											<string>D4C8A76A111A4F1D009CFDFF</string>
-											<string>D4C8A7B1111A5229009CFDFF</string>
 											<string>D4C8A853111A6F4E009CFDFF</string>
-											<string>D4C8A8E1111A797B009CFDFF</string>
-											<string>D4C8A8F9111A7A44009CFDFF</string>
-											<string>D4C8A8FA111A7A44009CFDFF</string>
+											<string>D4C8A906111A7DA8009CFDFF</string>
+											<string>D4C8A907111A7DA8009CFDFF</string>
+											<string>D4C8A908111A7DA8009CFDFF</string>
+											<string>D4C8A931111A7E5B009CFDFF</string>
+											<string>D4C8A932111A7E5B009CFDFF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -355,18 +355,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1172, 772}}</string>
+								<string>{{0, 0}, {1172, 528}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 60 1440 818 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>772pt</string>
+							<string>528pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>244pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -381,8 +381,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1172, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 60 1440 818 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -436,7 +434,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1172, 205}}</string>
+										<string>{{10, 27}, {1172, 217}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 60 1440 818 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -658,7 +658,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D4C8A8FF111A7A4E009CFDFF</string>
 		<string>D4C8A7A3111A51C0009CFDFF</string>
 		<string>D4C8A79E111A5187009CFDFF</string>
 		<string>/Users/twoism/dev/ruby/github/chimp_kit/ChimpKit.xcodeproj</string>

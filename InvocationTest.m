@@ -30,6 +30,7 @@
   Mock *m = [[Mock alloc] init];
 	[m get:@"doSomething" param1:@"foo" param2:@"bar"];
 	[m post:@"doSomething" param1:@"hoge" param2:@"fuga" param3:@"piyo"];
+  [m release];
 }
 
 @end

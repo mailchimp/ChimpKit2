@@ -42,13 +42,16 @@
 {
 	
   NSString *httpMethod  = [[signature componentsSeparatedByString:@":"] objectAtIndex:0];
-  [self requestForPath:[params objectForKey:httpMethod] withParams:params];
+  NSString *path        = [params objectForKey:httpMethod];
+  
+  [self requestForPath:path withParams:params];
   if (![httpMethod isEqualToString:@"get"]) {
     [self paramsForRequest:[params mutableCopy]];
   }
 
   [self.request setRequestMethod:[httpMethod uppercaseString]];
   [[self requestQueue] addOperation:self.request];
+  
 }
 
 - (void)addDictionaryParams:(NSDictionary*)dict 
@@ -142,7 +145,6 @@
   }
   
   NSURL *url 		= [NSURL URLWithString:[NSString stringWithFormat:@"%@%@?%@",self.baseUri,path,[self paramStringForRequest:[params mutableCopy]]]];
-
   self.request 	= [ASIFormDataRequest requestWithURL:url];
   
   [self.request setDelegate:self];

@@ -18,31 +18,31 @@
 
 - (id)initWithDelegate:(id)aDelegate
 {
-	self = [super init];
-	if (self != nil) {
+  self = [super init];
+  if (self != nil) {
     self.requestParams = [[NSMutableDictionary alloc] init];
-		self.delegate = aDelegate;
-	}
-	return self;
+    self.delegate = aDelegate;
+  }
+  return self;
 }
 
 - (void)parseParamDefaults:(NSDictionary*)params
 {
-	if ([params objectForKey:@"delegate"]) {
-		self.delegate = [params objectForKey:@"delegate"];
-	}
-	if ([params objectForKey:@"onSuccess"]) {
-		self.onSuccess = NSSelectorFromString([params objectForKey:@"onSuccess"]);
-	}
-	if ([params objectForKey:@"onFailure"]) {
-		self.onFailure = NSSelectorFromString([params objectForKey:@"onFailure"]);
-	}
+  if ([params objectForKey:@"delegate"]) {
+    self.delegate = [params objectForKey:@"delegate"];
+  }
+  if ([params objectForKey:@"onSuccess"]) {
+    self.onSuccess = NSSelectorFromString([params objectForKey:@"onSuccess"]);
+  }
+  if ([params objectForKey:@"onFailure"]) {
+    self.onFailure = NSSelectorFromString([params objectForKey:@"onFailure"]);
+  }
 }
 
 - (void)dispatchRequest:(NSString*)signature 
-						 withParams:(NSDictionary*)params
+             withParams:(NSDictionary*)params
 {
-	
+  
   NSString *httpMethod  = [[signature componentsSeparatedByString:@":"] objectAtIndex:0];
   NSString *path        = [params objectForKey:httpMethod];
   
@@ -50,7 +50,7 @@
   if (![httpMethod isEqualToString:@"get"]) {
     [self paramsForRequest:[params mutableCopy]];
   }
-
+  
   [self.request setRequestMethod:[httpMethod uppercaseString]];
   [[self requestQueue] addOperation:self.request];
   
@@ -70,15 +70,15 @@
 
 - (void)paramsForRequest:(NSMutableDictionary*)params
 {
-	[self stripParams:params];
-	for (id key in params) {
+  [self stripParams:params];
+  for (id key in params) {
     id param = [params valueForKey:key];
     if ([param respondsToSelector:@selector(objectForKey:)] || [param respondsToSelector:@selector(objectAtIndex:)]) {
       [self.requestParams addEntriesFromDictionary:[param parameterizeWithScope:key]];
     }else{
       [self.requestParams setObject:[params valueForKey:key] forKey:key];
     }
-	}
+  }
   [self addParamsToRequest];
 }
 
@@ -94,15 +94,15 @@
       NSString *value = [[params objectForKey:key] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
       queryString = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",key,value]];
     }
-	}
+  }
   return queryString;
 }
 
 - (void)requestForPath:(NSString*)path withParams:(NSDictionary*)params
 {
-	
+  
   if (![self requestQueue]) {
-  	[self setRequestQueue:[[[NSOperationQueue alloc] init] autorelease]];
+    [self setRequestQueue:[[[NSOperationQueue alloc] init] autorelease]];
   }
   
   [self paramsForRequest:[params mutableCopy]];
@@ -128,8 +128,8 @@
 
 - (void)methodMissing:(NSString*)method withParams:(NSDictionary*)params
 {
-	[self parseParamDefaults:params];
-	[self dispatchRequest:method withParams:params];
+  [self parseParamDefaults:params];
+  [self dispatchRequest:method withParams:params];
 }
 
 

@@ -3,7 +3,7 @@
 //  ChimpKit
 //
 //  Created by Christopher Burnett on 2/3/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 twoism. All rights reserved.
 //
 
 #import "TeePee.h"

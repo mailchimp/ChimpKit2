@@ -15,15 +15,17 @@
 	id  delegate;
 	SEL onSuccess;
 	SEL onFailure;
-	NSOperationQueue 	*requestQueue;
-	ASIFormDataRequest 		*request;
+	NSOperationQueue    *requestQueue;
+	ASIFormDataRequest 	*request;
+  NSString            *baseUri;
 }
 
-@property (assign,readwrite) id delegate;
+@property (assign,readwrite)    id delegate;
 @property (nonatomic,readwrite) SEL onSuccess;
 @property (nonatomic,readwrite) SEL onFailure;
-@property (nonatomic,retain) 		NSOperationQueue 	*requestQueue;
-@property (nonatomic,retain) 		ASIFormDataRequest 		*request;
+@property (nonatomic,retain) 		NSOperationQueue    *requestQueue;
+@property (nonatomic,retain) 		ASIFormDataRequest 	*request;
+@property (nonatomic,retain) 		NSString            *baseUri;
 
 - (id)initWithDelegate:(id)aDelegate;
 - (void)parseParamDefaults:(NSDictionary*)params;
@@ -35,4 +37,5 @@
 - (void)addDictionaryParams:(NSDictionary*)dict 
                      forKey:(NSString*)key;
 - (void)stripParams:(NSMutableDictionary*)params;
+
 @end

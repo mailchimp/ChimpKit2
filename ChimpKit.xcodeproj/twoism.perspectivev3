@@ -276,8 +276,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>1</integer>
+									<integer>11</integer>
+									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -317,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D449CAD1111281270045CBAC</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TeePee.m</string>
+								<string>TeePeeTest.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,20 +325,20 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D449CAD2111281270045CBAC</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TeePee.m</string>
+										<string>TeePeeTest.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D4C8A7DB111A6766009CFDFF</string>
+										<string>D4C8A815111A6BF9009CFDFF</string>
 										<key>history</key>
 										<array>
 											<string>D4BF2249111A3A6200B7A509</string>
 											<string>D4C8A6E5111A498A009CFDFF</string>
 											<string>D4C8A76A111A4F1D009CFDFF</string>
 											<string>D4C8A7B1111A5229009CFDFF</string>
-											<string>D4C8A7C3111A6495009CFDFF</string>
-											<string>D4C8A7D5111A671A009CFDFF</string>
-											<string>D4C8A7D6111A671A009CFDFF</string>
+											<string>D4C8A7DF111A692E009CFDFF</string>
+											<string>D4C8A7E0111A692E009CFDFF</string>
+											<string>D4C8A814111A6BF6009CFDFF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -655,7 +655,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D4C8A7DC111A6766009CFDFF</string>
 		<string>D4C8A7A3111A51C0009CFDFF</string>
 		<string>D4C8A79E111A5187009CFDFF</string>
 		<string>/Users/twoism/dev/ruby/github/chimp_kit/ChimpKit.xcodeproj</string>

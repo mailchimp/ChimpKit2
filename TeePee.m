@@ -13,7 +13,7 @@
 
 @implementation TeePee
 
-@synthesize delegate, requestQueue, onSuccess, onFailure, request;
+@synthesize delegate, requestQueue, onSuccess, onFailure, request, baseUri;
 
 - (id)initWithDelegate:(id)aDelegate
 {
@@ -101,7 +101,7 @@
   	[self setRequestQueue:[[[NSOperationQueue alloc] init] autorelease]];
   }
   
-  NSURL *url 		= [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",@"http://localhost:9393",path]];
+  NSURL *url 		= [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",self.baseUri,path]];
   self.request 	= [ASIFormDataRequest requestWithURL:url];
   
   [self.request setDelegate:self.delegate];

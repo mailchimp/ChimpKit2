@@ -3,7 +3,7 @@
 //  ChimpKit
 //
 //  Created by Christopher Burnett on 2/3/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 twoism. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -41,11 +41,11 @@
 - (void)addDictionaryParams:(NSDictionary*)dict 
                      forKey:(NSString*)key;
 - (void)addArrayParams:(NSArray*)array 
-                     forKey:(NSString*)key;
+                forKey:(NSString*)key;
 - (NSString*)concatDictionaryParams:(NSDictionary*)dict 
-                        forKey:(NSString*)key;
+                             forKey:(NSString*)key;
 - (NSString*)concatArrayParams:(NSArray*)array 
-                   forKey:(NSString*)key;
+                        forKey:(NSString*)key;
 - (void)stripParams:(NSMutableDictionary*)params;
 - (void)tp_requestDidLoad:(ASIFormDataRequest*)request;
 - (void)tp_requestDidFail:(ASIFormDataRequest*)request;

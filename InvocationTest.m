@@ -9,7 +9,7 @@
 @implementation Mock
 + (void)methodMissing:(NSString*)method withParams:(NSDictionary*)params
 {
-  NSLog(@"%@",params);
+  //NSLog(@"%@",params);
 }
 @end
 
@@ -20,8 +20,9 @@
 
 - (void)testClassMethodForwarding 
 {
+  //NSMutableArray *opts = [NSMutableArray arrayWithObjects:@"hoge","piyo",nil];
 	[Mock get:@"doSomething" param1:@"foo" param2:@"bar"];
-	[Mock post:@"doSomething" param1:@"hoge" param2:@"fuga" delegate:self onSuccess:@"loadedData"];
+	//[Mock post:@"doSomething" param1:@"hoge" param2:@"fuga" delegate:self foo:opts onSuccess:@"loadedData"];
 }
 
 - (void)testInstanceForwarding 

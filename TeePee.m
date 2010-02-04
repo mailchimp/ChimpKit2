@@ -1,31 +1,13 @@
-#import <Foundation/Foundation.h>
-#import "Reachability.h"
-#import "ASIHTTPRequest.h"
+//
+//  TeePee.m
+//  ChimpKit
+//
+//  Created by Christopher Burnett on 2/3/10.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//
 
-@interface TeePee : NSObject 
-{
-	id  delegate;
-	SEL onSuccess;
-	SEL onFailure;
-	NSOperationQueue 	*requestQueue;
-	ASIHTTPRequest 		*request;
-}
-
-@property (nonatomic,readwrite) id delegate;
-@property (nonatomic,readwrite) SEL onSuccess;
-@property (nonatomic,readwrite) SEL onFailure;
-@property (nonatomic,retain) 		NSOperationQueue 	*requestQueue;
-@property (nonatomic,retain) 		ASIHTTPRequest 		*request;
-
-- (id)initWithDelegate:(id)aDelegate;
-- (void)parseParamDefaults:(NSDictionary*)params;
-- (void)requestForPath:(NSString*)path;
-- (void)dispatchRequest:(NSString*)signature 
-             withParams:(NSDictionary*)params;
-- (NSDictionary*)parameterizeKey:(NSString*)key 
-						          withObject:(id)obj;
-
-@end
+#import "TeePee.h"
+#import "NSObject+Missing.h"
 
 @implementation TeePee
 
@@ -42,22 +24,24 @@
 
 - (void)parseParamDefaults:(NSDictionary*)params
 {
-	if ([params containsObject:@"delegate"]) {
+	if ([params objectForKey:@"delegate"]) {
 		self.delegate = [params objectForKey:@"delegate"];
 	}
-	if ([params containsObject:@"onSuccess"]) {
-		self.onSuccess = [params objectForKey:@"onSuccess"];
+	if ([params objectForKey:@"onSuccess"]) {
+		self.onSuccess = NSSelectorFromString([params objectForKey:@"onSuccess"]);
 	}
-	if ([params containsObject:@"onFailure"]) {
-		self.onFailure = [params objectForKey:@"onFailure"];
+	if ([params objectForKey:@"onFailure"]) {
+		self.onFailure = NSSelectorFromString([params objectForKey:@"onFailure"]);
 	}
 }
 
 - (void)dispatchRequest:(NSString*)signature 
 						 withParams:(NSDictionary*)params
 {
-	[self requestForPath:[params objectForKey:@"path"]];
-	[self paramsForRequest:[params mutableCopy]];
+	[self requestForPath:[params objectForKey:@"get"]];
+  [self paramsForRequest:[params mutableCopy]];
+  [self.request setRequestMethod:@"GET"];
+  [[self requestQueue] addOperation:self.request];
 }
 
 - (NSDictionary*)parameterizeKey:(NSString*)key 
@@ -76,9 +60,26 @@
 
 - (void)paramsForRequest:(NSMutableDictionary*)params
 {
-	[params removeObjectsForKeys:[NSArray arrayWithObjects:@"delegate",@"onSuccess",@"onFailure"]];
+	[params removeObjectsForKeys:[NSArray arrayWithObjects:@"delegate",@"onSuccess",@"onFailure",@"get",nil]];
 	for (id key in params) {
-		[self.request setPostValue:[params valueForKey:key] forKey:key];
+    
+    id param = [params valueForKey:key];
+    
+    if ([param respondsToSelector:@selector(objectForKey:)]) {
+      for (id paramKey in param) {
+        NSString *name  = [NSString stringWithFormat:@"%@[%@]",key,paramKey];
+        NSString *value = [[param objectForKey:paramKey] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+        [self.request setPostValue:value forKey:name];
+      }
+    }else if ([param respondsToSelector:@selector(objectAtIndex:)]){
+      for (int c = 0; c<[param count]; c++) {
+        NSString *name    = [NSString stringWithFormat:@"%@[%d]",key,c];
+        NSString *value   = [[param objectAtIndex:c] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+        [self.request setPostValue:value forKey:name];
+      }
+    }else{
+      [self.request setPostValue:[params valueForKey:key] forKey:key];
+    }
 	}
 }
 
@@ -87,22 +88,19 @@
 	if (![self requestQueue]) {
   	[self setRequestQueue:[[[NSOperationQueue alloc] init] autorelease]];
   }
-
-  NSURL *url 		= [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",@"http://localhost:3000",path]];
-  self.request 	= [ASIHTTPRequest requestWithURL:url];
-
+  
+  NSURL *url 		= [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",@"http://localhost:9393",@"/"]];
+  self.request 	= [ASIFormDataRequest requestWithURL:url];
+  
   [self.request setDelegate:self.delegate];
   [self.request setDidFinishSelector:self.onSuccess];
   [self.request setDidFailSelector:self.onFailure];
-
-  [[self requestQueue] addOperation:self.request];
 }
 
-- (void)methodMissing:(NSString*)methodSignature 
-           withParams:(NSDictionary*)params
+- (void)methodMissing:(NSString*)method withParams:(NSDictionary*)params
 {
 	[self parseParamDefaults:params];
-	[self dispatchRequest:methodSignature withParams:params];
+	[self dispatchRequest:method withParams:params];
 }
 
 @end

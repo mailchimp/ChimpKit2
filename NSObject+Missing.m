@@ -21,7 +21,7 @@
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-  [[self class] handleInvocation:invocation];
+  [self handleInvocation:invocation];
 }
 
 + (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
@@ -53,6 +53,32 @@
   
   NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values 
                                                              forKeys:keys];
+  
+  if ([self respondsToSelector:@selector(methodMissing:withParams:)]) {
+    
+    [self performSelector:@selector(methodMissing:withParams:) 
+               withObject:selectorString 
+               withObject:params];
+    
+  }
+}
+
+
+- (void)handleInvocation:(NSInvocation*)invocation
+{
+  NSString        *selectorString = NSStringFromSelector([invocation selector]);
+  NSArray         *parts          = [selectorString componentsSeparatedByString: @":"];
+  NSArray         *keys           = [parts objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [parts count]-1)]];
+  NSMutableArray  *values         = [[NSMutableArray alloc] init];
+  
+  for (int i=0; i<[keys count]; i++) {
+    id arg;
+    [invocation getArgument:&arg atIndex:i+2];
+    [values addObject:arg];
+  }
+  
+  NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values 
+                                                            forKeys:keys];
   
   if ([self respondsToSelector:@selector(methodMissing:withParams:)]) {
     

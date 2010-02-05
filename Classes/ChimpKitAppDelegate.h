@@ -3,7 +3,7 @@
 //  ChimpKit
 //
 //  Created by Christopher Burnett on 1/28/10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
+//  Copyright twoism 2010. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

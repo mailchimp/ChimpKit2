@@ -61,6 +61,8 @@
 		D4C97DC81117D5B00071E2E6 /* CKHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */; };
 		D4C97DCB1117D7AD0071E2E6 /* ChimpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */; };
 		D4D1162C1115436E0064E162 /* NSObject+Missing.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1162B1115436E0064E162 /* NSObject+Missing.m */; };
+		D4DE8064111BA8C600CAAFFB /* ChimpKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */; };
+		D4DE8065111BA8C600CAAFFB /* ChimpKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +149,7 @@
 		D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChimpKit.m; sourceTree = "<group>"; };
 		D4D1162A1115436E0064E162 /* NSObject+Missing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Missing.h"; sourceTree = "<group>"; };
 		D4D1162B1115436E0064E162 /* NSObject+Missing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Missing.m"; sourceTree = "<group>"; };
+		D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChimpKitTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +331,7 @@
 			children = (
 				D4BB717A11129DE600FD7C7F /* InvocationTest.m */,
 				D4BF21D2111A35BF00B7A509 /* TeePeeTest.m */,
+				D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -506,6 +510,7 @@
 				D4BF21B6111A340C00B7A509 /* Reachability.m in Sources */,
 				D4BF21BA111A343B00B7A509 /* ASIAuthenticationDialog.m in Sources */,
 				D4BF21D4111A35BF00B7A509 /* TeePeeTest.m in Sources */,
+				D4DE8065111BA8C600CAAFFB /* ChimpKitTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +544,7 @@
 				D4C8A84B111A6E09009CFDFF /* SBJsonWriter.m in Sources */,
 				D4C8A945111B1ABC009CFDFF /* NSDictionary+Parameterize.m in Sources */,
 				D4C8A948111B1B13009CFDFF /* NSArray+Parametrize.m in Sources */,
+				D4DE8064111BA8C600CAAFFB /* ChimpKitTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,7 @@
 //  ChimpKit
 //
 //  Created by Christopher Burnett on 2/4/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 twoism. All rights reserved.
 //
 
 #import "NSDictionary+Parameterize.h"
@@ -17,7 +17,8 @@
   for (id paramKey in self) {
     NSString *name  = [NSString stringWithFormat:@"%@[%@]",scope,paramKey];
     NSString *value = [[self objectForKey:paramKey] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-    [dict setObject:value forKey:name];
+    [dict setObject:value 
+             forKey:name];
   }
   return dict;
 }

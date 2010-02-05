@@ -22,7 +22,7 @@
   tp          = [[TeePee alloc] initWithDelegate:self];
   tp.baseUri  = TEST_SERVER;
 }
-
+/*
 - (void)testWithStrings
 {
   //[tp get:@"/" foo:@"bar" bar:@"hoge" onSuccess:@"didLoad:" onFailure:@"didFail:"];
@@ -52,5 +52,5 @@
 {
   NSLog(@"failed with %@",[request error]);
 }
-
+*/
 @end

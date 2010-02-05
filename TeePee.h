@@ -22,7 +22,7 @@
   NSMutableDictionary *requestParams;
 }
 
-@property (assign,readwrite)    id delegate;
+@property (assign,readwrite)    id  delegate;
 @property (nonatomic,readwrite) SEL onSuccess;
 @property (nonatomic,readwrite) SEL onFailure;
 @property (nonatomic,retain)    NSOperationQueue    *requestQueue;
@@ -57,7 +57,8 @@
  Sets up the ASIHTTPRequest sets the current class as the delegate 
  and sets the success and fail callbacks.
 */
-- (void)requestForPath:(NSString*)path withParams:(NSDictionary*)params;
+- (void)requestForPath:(NSString*)path 
+            withParams:(NSDictionary*)params;
 /*
  Everything starts here after a methodMissing call is found.
 */

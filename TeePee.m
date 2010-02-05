@@ -20,23 +20,20 @@
 {
   self = [super init];
   if (self != nil) {
-    self.requestParams = [[NSMutableDictionary alloc] init];
-    self.delegate = aDelegate;
+    self.requestParams  = [[NSMutableDictionary alloc] init];
+    self.delegate       = aDelegate;
   }
   return self;
 }
 
 - (void)parseParamDefaults:(NSDictionary*)params
 {
-  if ([params objectForKey:@"delegate"]) {
+  if ([params objectForKey:@"delegate"])
     self.delegate = [params objectForKey:@"delegate"];
-  }
-  if ([params objectForKey:@"onSuccess"]) {
+  if ([params objectForKey:@"onSuccess"])
     self.onSuccess = NSSelectorFromString([params objectForKey:@"onSuccess"]);
-  }
-  if ([params objectForKey:@"onFailure"]) {
+  if ([params objectForKey:@"onFailure"])
     self.onFailure = NSSelectorFromString([params objectForKey:@"onFailure"]);
-  }
 }
 
 - (void)dispatchRequest:(NSString*)signature 
@@ -47,6 +44,7 @@
   NSString *path        = [params objectForKey:httpMethod];
   
   [self requestForPath:path withParams:params];
+  
   if (![httpMethod isEqualToString:@"get"]) {
     [self paramsForRequest:[params mutableCopy]];
   }
@@ -59,7 +57,8 @@
 - (void)addParamsToRequest
 {
   for (id key in self.requestParams) {
-    [self.request setPostValue:[self.requestParams objectForKey:key] forKey:key];
+    [self.request setPostValue:[self.requestParams objectForKey:key] 
+                        forKey:key];
   }
 }
 
@@ -76,7 +75,8 @@
     if ([param respondsToSelector:@selector(objectForKey:)] || [param respondsToSelector:@selector(objectAtIndex:)]) {
       [self.requestParams addEntriesFromDictionary:[param parameterizeWithScope:key]];
     }else{
-      [self.requestParams setObject:[params valueForKey:key] forKey:key];
+      [self.requestParams setObject:[params valueForKey:key] 
+                             forKey:key];
     }
   }
   [self addParamsToRequest];
@@ -86,19 +86,23 @@
 {
   NSString *queryString = @"";
   [self stripParams:params];
+  
   for (id key in params) {
     id param = [params valueForKey:key];
     if ([param respondsToSelector:@selector(objectForKey:)] || [param respondsToSelector:@selector(objectAtIndex:)]) {
+      // handle dictionary & array values
       queryString = [queryString stringByAppendingString:[param toQueryStringWithScope:key]];
     }else{
+      // handle strings
       NSString *value = [[params objectForKey:key] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-      queryString = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",key,value]];
+      queryString     = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",key,value]];
     }
   }
   return queryString;
 }
 
-- (void)requestForPath:(NSString*)path withParams:(NSDictionary*)params
+- (void)requestForPath:(NSString*)path 
+            withParams:(NSDictionary*)params
 {
   
   if (![self requestQueue]) {
@@ -119,17 +123,21 @@
 
 - (void)tp_requestDidLoad:(ASIFormDataRequest*)aRequest
 {
-  [self.delegate performSelector:self.onSuccess withObject:[[aRequest responseString] JSONValue]];
+  [self.delegate performSelector:self.onSuccess 
+                      withObject:[[aRequest responseString] JSONValue]];
 }
 - (void)tp_requestDidFail:(ASIFormDataRequest*)aRequest
 {
-  [self.delegate performSelector:self.onFailure withObject:aRequest];
+  [self.delegate performSelector:self.onFailure 
+                      withObject:aRequest];
 }
 
-- (void)methodMissing:(NSString*)method withParams:(NSDictionary*)params
+- (void)methodMissing:(NSString*)method 
+           withParams:(NSDictionary*)params
 {
   [self parseParamDefaults:params];
-  [self dispatchRequest:method withParams:params];
+  [self dispatchRequest:method 
+             withParams:params];
 }
 
 

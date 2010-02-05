@@ -13,11 +13,11 @@
 
 @interface TeePee : NSObject 
 {
-	id  delegate;
-	SEL onSuccess;
-	SEL onFailure;
-	NSOperationQueue    *requestQueue;
-	ASIFormDataRequest 	*request;
+  id  delegate;
+  SEL onSuccess;
+  SEL onFailure;
+  NSOperationQueue    *requestQueue;
+  ASIFormDataRequest  *request;
   NSString            *baseUri;
   NSMutableDictionary *requestParams;
 }
@@ -25,10 +25,10 @@
 @property (assign,readwrite)    id delegate;
 @property (nonatomic,readwrite) SEL onSuccess;
 @property (nonatomic,readwrite) SEL onFailure;
-@property (nonatomic,retain) 		NSOperationQueue    *requestQueue;
-@property (nonatomic,retain) 		ASIFormDataRequest 	*request;
-@property (nonatomic,retain) 		NSString            *baseUri;
-@property (nonatomic,retain) 		NSMutableDictionary *requestParams;
+@property (nonatomic,retain)    NSOperationQueue    *requestQueue;
+@property (nonatomic,retain)    ASIFormDataRequest  *request;
+@property (nonatomic,retain)    NSString            *baseUri;
+@property (nonatomic,retain)    NSMutableDictionary *requestParams;
 
 - (id)initWithDelegate:(id)aDelegate;
 /*

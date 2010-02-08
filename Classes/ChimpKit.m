@@ -15,7 +15,7 @@
 {
 	self = [super init];
 	if (self != nil) {
-    self.baseUri  = @"http://api.mailchimp.com/1.2";
+    self.baseUri  = @"https://api.mailchimp.com/1.2";
 		self.delegate = aDelegate;
     self.requestParams = [[NSMutableDictionary alloc] init];
     [self.requestParams setObject:@"64f5d08d441ecbf463b046631b087a58-us1" forKey:@"apikey"];

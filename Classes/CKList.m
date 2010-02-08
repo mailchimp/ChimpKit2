@@ -11,7 +11,7 @@
 
 @implementation CKList
 
-+ (void)abuseReports:(NSString*)listId 
+- (void)abuseReports:(NSString*)listId 
           startingAt:(NSNumber*)start 
            withLimit:(NSNumber*)limit
            sinceDate:(NSString*)since
@@ -19,7 +19,7 @@
   
 }
 
-+ (void)batchSubscribe:(NSString*)listId 
+- (void)batchSubscribe:(NSString*)listId 
              withBatch:(NSArray*)batch 
            doubleOptIn:(BOOL)optIn 
         updateExisting:(BOOL)update 
@@ -28,7 +28,7 @@
   
 }
 
-+ (void)batchUnsubscribe:(NSString*)listId 
+- (void)batchUnsubscribe:(NSString*)listId 
                   emails:(NSArray*)emails 
             deleteMember:(BOOL)deleteMember 
              sendGoodbye:(BOOL)goodbye 
@@ -37,25 +37,25 @@
   
 }
 
-+ (void)growthHistory:(NSString*)listId
+- (void)growthHistory:(NSString*)listId
 {
   
 }
 
-+ (void)interestGroupAdd:(NSString*)listId 
+- (void)interestGroupAdd:(NSString*)listId 
                groupName:(NSString*)name
 {
   
 }
 
-+ (void)interestGroupDelete:(NSString*)listId 
+- (void)interestGroupDelete:(NSString*)listId 
                     groupId:(NSString*)groupId 
                   groupName:(NSString*)name
 {
   
 }
 
-+ (void)interestGroupUpdate:(NSString*)listId 
+- (void)interestGroupUpdate:(NSString*)listId 
                     groupId:(NSString*)groupId 
                     oldName:(NSString*)oldName 
                     newName:(NSString*)newName
@@ -63,42 +63,32 @@
   
 }
 
-+ (void)interestGroups:(NSString*)listId
+- (void)interestGroups:(NSString*)listId
 {
-  
+  [self get:@"/" method:@"listInterestGroups" id:listId];
 }
 
-+ (void)memberInfo:(NSString*)listId 
+- (void)memberInfo:(NSString*)listId 
           forEmail:(NSString*)email
 {
-  
+  [self get:@"/" method:@"listMemberInfo" email_address:email];
 }
 
-+ (void)listMembers:(NSString*)listId 
+- (void)listMembers:(NSString*)listId 
          withStatus:(NSString*)status 
           sinceDate:(NSString*)since 
          startingAt:(NSNumber*)start 
           withLimit:(NSNumber*)limit
 {
-  
+  [self get:@"/" 
+     method:@"listMembers" 
+     status:status 
+      since:since 
+      start:[start stringValue] 
+      limit:[limit stringValue]];
 }
 
-+ (void)mergerVarAdd:(NSString*)listId 
-              forTag:(NSString*)tag 
-            withName:(NSString*)name 
-             withReq:(NSDictionary*)req
-{
-  
-}
-
-+ (void)mergeVarDelete:(NSString*)listId 
-                forTag:(NSString*)tag 
-           withOptions:(NSDictionary*)options
-{
-  
-}
-
-+ (void)subscribe:(NSString*)listId 
+- (void)subscribe:(NSString*)listId 
         withEmail:(NSString*)email 
         mergeVars:(NSArray*)vars 
         emailType:(NSString*)type 
@@ -107,21 +97,34 @@
  replaceInterests:(BOOL)replace 
       sendWelcome:(BOOL)welcome
 {
-  
+  [self get:@"/" method:@"listSubscribe"
+          email_address:email
+             merge_vars:vars
+             email_type:type
+           double_optin:optin
+        update_existing:update
+      replace_interests:replace
+           send_welcome:welcome];
 }
 
-+ (void)unsubscribe:(NSString*)listId 
+- (void)unsubscribe:(NSString*)listId 
           withEmail:(NSString*)email 
        deleteMember:(BOOL)deleteMember
         sendGoodbye:(BOOL)goodbye
          sendNotify:(BOOL)notify
 {
-  
+  [self get:@"/" 
+     method:@"listUnsubscribe" 
+email_address:email 
+delete_member:deleteMember
+send_goodbye:goodbye
+send_notify:notify];
 }
 
-+ (void)findAll
+- (void)findAll
 {
-  
+  NSLog(@"made it");
+  [self get:@"/" method:@"lists"];
 }
 
 @end

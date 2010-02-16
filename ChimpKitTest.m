@@ -23,7 +23,7 @@
 - (void)testLists
 {
   [self prepare];
-    [ck get:@"/" method:@"lists" onSuccess:@"didLoadLists:"];
+  [ck get:@"/" method:@"lists" onSuccess:@"didLoadLists:"];
   [self waitForStatus:kGHUnitWaitStatusSuccess timeout:2.0];
 }
 

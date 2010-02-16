@@ -123,7 +123,6 @@ send_notify:notify];
 
 - (void)findAll
 {
-  NSLog(@"made it");
   [self get:@"/" method:@"lists"];
 }
 

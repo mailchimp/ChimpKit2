@@ -55,15 +55,6 @@
          startingAt:(NSNumber*)start 
           withLimit:(NSNumber*)limit;
 
-- (void)mergerVarAdd:(NSString*)listId 
-              forTag:(NSString*)tag 
-            withName:(NSString*)name 
-             withReq:(NSDictionary*)req;
-
-- (void)mergeVarDelete:(NSString*)listId 
-                forTag:(NSString*)tag 
-           withOptions:(NSDictionary*)options;
-
 - (void)subscribe:(NSString*)listId 
         withEmail:(NSString*)email 
         mergeVars:(NSArray*)vars 

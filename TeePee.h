@@ -75,4 +75,5 @@
 
 + (NSMethodSignature*)formatDynamicSignature;
 + (void)handleInvocation:(NSInvocation*)invocation;
+- (void)handleInvocation:(NSInvocation*)invocation;
 @end

@@ -44,8 +44,32 @@
 		D4BF21B9111A343B00B7A509 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21B8111A343B00B7A509 /* ASIAuthenticationDialog.m */; };
 		D4BF21BA111A343B00B7A509 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21B8111A343B00B7A509 /* ASIAuthenticationDialog.m */; };
 		D4BF21D3111A35BF00B7A509 /* TeePeeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21D2111A35BF00B7A509 /* TeePeeTest.m */; };
-		D4BF21D4111A35BF00B7A509 /* TeePeeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21D2111A35BF00B7A509 /* TeePeeTest.m */; };
 		D4BF21E9111A377700B7A509 /* TeePee.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21E8111A377700B7A509 /* TeePee.m */; };
+		D4C4E99411348A860079464E /* NSObject+Missing.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1162B1115436E0064E162 /* NSObject+Missing.m */; };
+		D4C4E99511348A860079464E /* CKCampaign.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DBD1117D45D0071E2E6 /* CKCampaign.m */; };
+		D4C4E99611348A860079464E /* CKList.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC01117D50C0071E2E6 /* CKList.m */; };
+		D4C4E99711348A860079464E /* CKMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC41117D5730071E2E6 /* CKMember.m */; };
+		D4C4E99811348A860079464E /* CKHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */; };
+		D4C4E99911348A860079464E /* ChimpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */; };
+		D4C4E99A11348A860079464E /* TeePee.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21E8111A377700B7A509 /* TeePee.m */; };
+		D4C4E99B11348A860079464E /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A83A111A6E09009CFDFF /* NSObject+SBJSON.m */; };
+		D4C4E99C11348A860079464E /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A83C111A6E09009CFDFF /* NSString+SBJSON.m */; };
+		D4C4E99D11348A860079464E /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A83E111A6E09009CFDFF /* SBJSON.m */; };
+		D4C4E99E11348A860079464E /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A840111A6E09009CFDFF /* SBJsonBase.m */; };
+		D4C4E99F11348A860079464E /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A842111A6E09009CFDFF /* SBJsonParser.m */; };
+		D4C4E9A011348A860079464E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A844111A6E09009CFDFF /* SBJsonWriter.m */; };
+		D4C4E9A111348A860079464E /* NSDictionary+Parameterize.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A944111B1ABC009CFDFF /* NSDictionary+Parameterize.m */; };
+		D4C4E9A211348A860079464E /* NSArray+Parametrize.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A947111B1B13009CFDFF /* NSArray+Parametrize.m */; };
+		D4C4E9CB11348D910079464E /* CKDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C4E9CA11348D910079464E /* CKDialogController.m */; };
+		D4C4E9CC11348D910079464E /* CKDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C4E9CA11348D910079464E /* CKDialogController.m */; };
+		D4C4E9CE11348D9D0079464E /* CKDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9CD11348D9D0079464E /* CKDialog.xib */; };
+		D4C4E9CF11348D9D0079464E /* CKDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9CD11348D9D0079464E /* CKDialog.xib */; };
+		D4C4E9D511348DB60079464E /* bg_signup.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9D211348DB60079464E /* bg_signup.png */; };
+		D4C4E9D611348DB60079464E /* btn_subscribe.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9D311348DB60079464E /* btn_subscribe.png */; };
+		D4C4E9D711348DB60079464E /* btn_close.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9D411348DB60079464E /* btn_close.png */; };
+		D4C4E9D811348DB60079464E /* bg_signup.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9D211348DB60079464E /* bg_signup.png */; };
+		D4C4E9D911348DB60079464E /* btn_subscribe.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9D311348DB60079464E /* btn_subscribe.png */; };
+		D4C4E9DA11348DB60079464E /* btn_close.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9D411348DB60079464E /* btn_close.png */; };
 		D4C8A845111A6E09009CFDFF /* CREDITS in Resources */ = {isa = PBXBuildFile; fileRef = D4C8A837111A6E09009CFDFF /* CREDITS */; };
 		D4C8A846111A6E09009CFDFF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A83A111A6E09009CFDFF /* NSObject+SBJSON.m */; };
 		D4C8A847111A6E09009CFDFF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A83C111A6E09009CFDFF /* NSString+SBJSON.m */; };
@@ -62,8 +86,6 @@
 		D4C97DCB1117D7AD0071E2E6 /* ChimpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */; };
 		D4D1162C1115436E0064E162 /* NSObject+Missing.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1162B1115436E0064E162 /* NSObject+Missing.m */; };
 		D4DE8064111BA8C600CAAFFB /* ChimpKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */; };
-		D4DE8065111BA8C600CAAFFB /* ChimpKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */; };
-		D4E958D411207D86005BD511 /* CKListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E958D311207D86005BD511 /* CKListTest.m */; };
 		D4E958D511207D86005BD511 /* CKListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E958D311207D86005BD511 /* CKListTest.m */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +143,12 @@
 		D4BF21D2111A35BF00B7A509 /* TeePeeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeePeeTest.m; sourceTree = "<group>"; };
 		D4BF21E7111A377700B7A509 /* TeePee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeePee.h; sourceTree = "<group>"; };
 		D4BF21E8111A377700B7A509 /* TeePee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeePee.m; sourceTree = "<group>"; };
+		D4C4E9C911348D910079464E /* CKDialogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKDialogController.h; sourceTree = "<group>"; };
+		D4C4E9CA11348D910079464E /* CKDialogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKDialogController.m; sourceTree = "<group>"; };
+		D4C4E9CD11348D9D0079464E /* CKDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CKDialog.xib; sourceTree = "<group>"; };
+		D4C4E9D211348DB60079464E /* bg_signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_signup.png; sourceTree = "<group>"; };
+		D4C4E9D311348DB60079464E /* btn_subscribe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_subscribe.png; sourceTree = "<group>"; };
+		D4C4E9D411348DB60079464E /* btn_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_close.png; sourceTree = "<group>"; };
 		D4C8A837111A6E09009CFDFF /* CREDITS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		D4C8A838111A6E09009CFDFF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		D4C8A839111A6E09009CFDFF /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
@@ -191,9 +219,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D4BB7139111282DB00FD7C7F /* views */,
-				D4BB7138111282D100FD7C7F /* controllers */,
-				D4BB7137111282C800FD7C7F /* models */,
 				D4BB7136111282BE00FD7C7F /* app */,
 			);
 			path = Classes;
@@ -211,7 +236,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				D4D11628111543170064E162 /* Libs */,
+				D4C4E9C111348C6A0079464E /* ChimpKit */,
 				D4BB717911129DA600FD7C7F /* Tests */,
 				D4BB70DD111281A100FD7C7F /* Libs */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -313,20 +338,26 @@
 				D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */,
 			);
 			name = models;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		D4BB7138111282D100FD7C7F /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D4C4E9C911348D910079464E /* CKDialogController.h */,
+				D4C4E9CA11348D910079464E /* CKDialogController.m */,
 			);
 			name = controllers;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		D4BB7139111282DB00FD7C7F /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D4C4E9CD11348D9D0079464E /* CKDialog.xib */,
 			);
 			name = views;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		D4BB717911129DA600FD7C7F /* Tests */ = {
@@ -358,6 +389,36 @@
 				D4BF21A0111A331D00B7A509 /* ASINSStringAdditions.m */,
 			);
 			name = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		D4C4E9C111348C6A0079464E /* ChimpKit */ = {
+			isa = PBXGroup;
+			children = (
+				D4C4E9D011348DA20079464E /* assets */,
+				D4BB7139111282DB00FD7C7F /* views */,
+				D4BB7138111282D100FD7C7F /* controllers */,
+				D4BB7137111282C800FD7C7F /* models */,
+				D4D11628111543170064E162 /* Libs */,
+			);
+			name = ChimpKit;
+			sourceTree = "<group>";
+		};
+		D4C4E9D011348DA20079464E /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				D4C4E9D111348DB60079464E /* Images */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		D4C4E9D111348DB60079464E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D4C4E9D211348DB60079464E /* bg_signup.png */,
+				D4C4E9D311348DB60079464E /* btn_subscribe.png */,
+				D4C4E9D411348DB60079464E /* btn_close.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		D4C8A836111A6E09009CFDFF /* JSON */ = {
@@ -485,6 +546,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				D4C4E9CE11348D9D0079464E /* CKDialog.xib in Resources */,
+				D4C4E9D511348DB60079464E /* bg_signup.png in Resources */,
+				D4C4E9D611348DB60079464E /* btn_subscribe.png in Resources */,
+				D4C4E9D711348DB60079464E /* btn_close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +559,10 @@
 			files = (
 				D4BB711C1112824B00FD7C7F /* RunTests.sh in Resources */,
 				D4C8A845111A6E09009CFDFF /* CREDITS in Resources */,
+				D4C4E9CF11348D9D0079464E /* CKDialog.xib in Resources */,
+				D4C4E9D811348DB60079464E /* bg_signup.png in Resources */,
+				D4C4E9D911348DB60079464E /* btn_subscribe.png in Resources */,
+				D4C4E9DA11348DB60079464E /* btn_close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,8 +573,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* ChimpKitAppDelegate.m in Sources */,
+				D4C4E99411348A860079464E /* NSObject+Missing.m in Sources */,
+				D4C4E99511348A860079464E /* CKCampaign.m in Sources */,
+				D4C4E99611348A860079464E /* CKList.m in Sources */,
+				D4C4E99711348A860079464E /* CKMember.m in Sources */,
+				D4C4E99811348A860079464E /* CKHelperMethods.m in Sources */,
+				D4C4E99911348A860079464E /* ChimpKit.m in Sources */,
 				D4BF21A6111A331D00B7A509 /* ASIInputStream.m in Sources */,
 				D4BF21A7111A331D00B7A509 /* ASIFormDataRequest.m in Sources */,
 				D4BF21A8111A331D00B7A509 /* ASIHTTPRequest.m in Sources */,
@@ -513,9 +586,18 @@
 				D4BF21AA111A331D00B7A509 /* ASINSStringAdditions.m in Sources */,
 				D4BF21B6111A340C00B7A509 /* Reachability.m in Sources */,
 				D4BF21BA111A343B00B7A509 /* ASIAuthenticationDialog.m in Sources */,
-				D4BF21D4111A35BF00B7A509 /* TeePeeTest.m in Sources */,
-				D4DE8065111BA8C600CAAFFB /* ChimpKitTest.m in Sources */,
-				D4E958D411207D86005BD511 /* CKListTest.m in Sources */,
+				D4C4E99A11348A860079464E /* TeePee.m in Sources */,
+				D4C4E99B11348A860079464E /* NSObject+SBJSON.m in Sources */,
+				D4C4E99C11348A860079464E /* NSString+SBJSON.m in Sources */,
+				D4C4E99D11348A860079464E /* SBJSON.m in Sources */,
+				D4C4E99E11348A860079464E /* SBJsonBase.m in Sources */,
+				D4C4E99F11348A860079464E /* SBJsonParser.m in Sources */,
+				D4C4E9A011348A860079464E /* SBJsonWriter.m in Sources */,
+				D4C4E9A111348A860079464E /* NSDictionary+Parameterize.m in Sources */,
+				D4C4E9A211348A860079464E /* NSArray+Parametrize.m in Sources */,
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* ChimpKitAppDelegate.m in Sources */,
+				D4C4E9CB11348D910079464E /* CKDialogController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +633,7 @@
 				D4C8A948111B1B13009CFDFF /* NSArray+Parametrize.m in Sources */,
 				D4DE8064111BA8C600CAAFFB /* ChimpKitTest.m in Sources */,
 				D4E958D511207D86005BD511 /* CKListTest.m in Sources */,
+				D4C4E9CC11348D910079464E /* CKDialogController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

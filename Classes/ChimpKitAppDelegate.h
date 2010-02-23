@@ -8,16 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChimpKitAppDelegate : NSObject <UIApplicationDelegate,UITextFieldDelegate> {
-    UIWindow *window;
+@interface ChimpKitAppDelegate : NSObject <UIApplicationDelegate> {
+  UIWindow *window;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
-- (IBAction)showDialog;
-- (BOOL)validateEmailAddress:(NSString*)address;
-- (void)signupDidSucceed:(id)data;
-- (void)signupDidFail:(id)data;
 
 @end
 

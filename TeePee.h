@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ASIFormDataRequest.h"
-#import "NSObject+Missing.h"
 #import "JSON.h"
 
 @interface TeePee : NSObject 
@@ -73,4 +72,7 @@
 */
 - (void)tp_requestDidLoad:(ASIFormDataRequest*)request;
 - (void)tp_requestDidFail:(ASIFormDataRequest*)request;
+
++ (NSMethodSignature*)formatDynamicSignature;
++ (void)handleInvocation:(NSInvocation*)invocation;
 @end

@@ -1,6 +1,5 @@
 #import "GHUnit.h"
 #import "GHAsyncTestCase.h"
-#import "NSObject+Missing.h"
 #import "ChimpKit.h"
 
 @interface ChimpKitTest : GHAsyncTestCase { 

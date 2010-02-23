@@ -1,6 +1,5 @@
 #import "GHUnit.h"
 #import "GHAsyncTestCase.h"
-#import "NSObject+Missing.h"
 #import "TeePee.h"
 
 #define TEST_SERVER @"http://localhost:9393"

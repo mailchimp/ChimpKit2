@@ -7,7 +7,7 @@
 //
 
 #import "ChimpKitAppDelegate.h"
-#import "CKDialogController.h"
+#import "SampleController.h"
 
 @implementation ChimpKitAppDelegate
 
@@ -15,6 +15,11 @@
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
+  
+  SampleController *controller = [[SampleController alloc] initWithNibName:@"SampleController" bundle:nil];
+  
+  [window addSubview:controller.view];
+  
   [window makeKeyAndVisible];
 }
 
@@ -23,36 +28,5 @@
   [window release];
   [super dealloc];
 }
-
-
-- (IBAction)showDialog
-{
-  CKDialogController *dialog = [[CKDialogController alloc] initWithDelegate:self];
-  
-  dialog.onSuccess = @selector(signupDidSucceed:);
-  dialog.onFailure = @selector(signupDidFail:);
-  
-  [dialog show];
-}
-
-- (void)signupDidSucceed:(id)data
-{
-  NSLog(@"sucess!!");
-}
-
-- (void)signupDidFail:(id)data
-{
-  NSLog(@"fail!!");
-}
-
-- (BOOL)validateEmailAddress:(NSString*)address
-{
-  if ([address isEqualToString:@"me@me.com"]) {
-    return YES;
-  }else{
-    return NO;
-  }
-}
-
 
 @end

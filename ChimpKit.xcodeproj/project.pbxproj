@@ -23,7 +23,6 @@
 		D4BB71231112828400FD7C7F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB71221112828400FD7C7F /* MessageUI.framework */; };
 		D4BB71241112828400FD7C7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		D4BB712D111282A400FD7C7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		D4BB717B11129DE600FD7C7F /* InvocationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BB717A11129DE600FD7C7F /* InvocationTest.m */; };
 		D4BF21A1111A331D00B7A509 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF2198111A331D00B7A509 /* ASIInputStream.m */; };
 		D4BF21A2111A331D00B7A509 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF219A111A331D00B7A509 /* ASIFormDataRequest.m */; };
 		D4BF21A3111A331D00B7A509 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF219C111A331D00B7A509 /* ASIHTTPRequest.m */; };
@@ -45,7 +44,6 @@
 		D4BF21BA111A343B00B7A509 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21B8111A343B00B7A509 /* ASIAuthenticationDialog.m */; };
 		D4BF21D3111A35BF00B7A509 /* TeePeeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21D2111A35BF00B7A509 /* TeePeeTest.m */; };
 		D4BF21E9111A377700B7A509 /* TeePee.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21E8111A377700B7A509 /* TeePee.m */; };
-		D4C4E99411348A860079464E /* NSObject+Missing.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1162B1115436E0064E162 /* NSObject+Missing.m */; };
 		D4C4E99511348A860079464E /* CKCampaign.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DBD1117D45D0071E2E6 /* CKCampaign.m */; };
 		D4C4E99611348A860079464E /* CKList.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC01117D50C0071E2E6 /* CKList.m */; };
 		D4C4E99711348A860079464E /* CKMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC41117D5730071E2E6 /* CKMember.m */; };
@@ -70,6 +68,10 @@
 		D4C4E9D811348DB60079464E /* bg_signup.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9D211348DB60079464E /* bg_signup.png */; };
 		D4C4E9D911348DB60079464E /* btn_subscribe.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9D311348DB60079464E /* btn_subscribe.png */; };
 		D4C4E9DA11348DB60079464E /* btn_close.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C4E9D411348DB60079464E /* btn_close.png */; };
+		D4C4EA11113492080079464E /* SampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C4EA0F113492080079464E /* SampleController.m */; };
+		D4C4EA12113492080079464E /* SampleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C4EA10113492080079464E /* SampleController.xib */; };
+		D4C4EA13113492080079464E /* SampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C4EA0F113492080079464E /* SampleController.m */; };
+		D4C4EA14113492080079464E /* SampleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C4EA10113492080079464E /* SampleController.xib */; };
 		D4C8A845111A6E09009CFDFF /* CREDITS in Resources */ = {isa = PBXBuildFile; fileRef = D4C8A837111A6E09009CFDFF /* CREDITS */; };
 		D4C8A846111A6E09009CFDFF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A83A111A6E09009CFDFF /* NSObject+SBJSON.m */; };
 		D4C8A847111A6E09009CFDFF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A83C111A6E09009CFDFF /* NSString+SBJSON.m */; };
@@ -84,7 +86,6 @@
 		D4C97DC51117D5730071E2E6 /* CKMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC41117D5730071E2E6 /* CKMember.m */; };
 		D4C97DC81117D5B00071E2E6 /* CKHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */; };
 		D4C97DCB1117D7AD0071E2E6 /* ChimpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */; };
-		D4D1162C1115436E0064E162 /* NSObject+Missing.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1162B1115436E0064E162 /* NSObject+Missing.m */; };
 		D4DE8064111BA8C600CAAFFB /* ChimpKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */; };
 		D4E958D511207D86005BD511 /* CKListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E958D311207D86005BD511 /* CKListTest.m */; };
 /* End PBXBuildFile section */
@@ -122,7 +123,6 @@
 		D4BB711D1112828400FD7C7F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D4BB711F1112828400FD7C7F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		D4BB71221112828400FD7C7F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		D4BB717A11129DE600FD7C7F /* InvocationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvocationTest.m; sourceTree = "<group>"; };
 		D4BF2196111A331D00B7A509 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
 		D4BF2197111A331D00B7A509 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
 		D4BF2198111A331D00B7A509 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
@@ -149,6 +149,9 @@
 		D4C4E9D211348DB60079464E /* bg_signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_signup.png; sourceTree = "<group>"; };
 		D4C4E9D311348DB60079464E /* btn_subscribe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_subscribe.png; sourceTree = "<group>"; };
 		D4C4E9D411348DB60079464E /* btn_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_close.png; sourceTree = "<group>"; };
+		D4C4EA0E113492080079464E /* SampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleController.h; sourceTree = "<group>"; };
+		D4C4EA0F113492080079464E /* SampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleController.m; sourceTree = "<group>"; };
+		D4C4EA10113492080079464E /* SampleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleController.xib; sourceTree = "<group>"; };
 		D4C8A837111A6E09009CFDFF /* CREDITS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		D4C8A838111A6E09009CFDFF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		D4C8A839111A6E09009CFDFF /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
@@ -177,8 +180,6 @@
 		D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHelperMethods.m; sourceTree = "<group>"; };
 		D4C97DC91117D7AD0071E2E6 /* ChimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChimpKit.h; sourceTree = "<group>"; };
 		D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChimpKit.m; sourceTree = "<group>"; };
-		D4D1162A1115436E0064E162 /* NSObject+Missing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Missing.h"; sourceTree = "<group>"; };
-		D4D1162B1115436E0064E162 /* NSObject+Missing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Missing.m"; sourceTree = "<group>"; };
 		D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChimpKitTest.m; sourceTree = "<group>"; };
 		D4E958D311207D86005BD511 /* CKListTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKListTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,6 +320,9 @@
 			children = (
 				1D3623240D0F684500981E51 /* ChimpKitAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ChimpKitAppDelegate.m */,
+				D4C4EA0E113492080079464E /* SampleController.h */,
+				D4C4EA0F113492080079464E /* SampleController.m */,
+				D4C4EA10113492080079464E /* SampleController.xib */,
 			);
 			name = app;
 			sourceTree = "<group>";
@@ -363,7 +367,6 @@
 		D4BB717911129DA600FD7C7F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D4BB717A11129DE600FD7C7F /* InvocationTest.m */,
 				D4BF21D2111A35BF00B7A509 /* TeePeeTest.m */,
 				D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */,
 				D4E958D311207D86005BD511 /* CKListTest.m */,
@@ -465,8 +468,6 @@
 		D4C8A84F111A6E89009CFDFF /* TeePee */ = {
 			isa = PBXGroup;
 			children = (
-				D4D1162A1115436E0064E162 /* NSObject+Missing.h */,
-				D4D1162B1115436E0064E162 /* NSObject+Missing.m */,
 				D4BF21E7111A377700B7A509 /* TeePee.h */,
 				D4BF21E8111A377700B7A509 /* TeePee.m */,
 				D4C8A943111B1ABC009CFDFF /* NSDictionary+Parameterize.h */,
@@ -550,6 +551,7 @@
 				D4C4E9D511348DB60079464E /* bg_signup.png in Resources */,
 				D4C4E9D611348DB60079464E /* btn_subscribe.png in Resources */,
 				D4C4E9D711348DB60079464E /* btn_close.png in Resources */,
+				D4C4EA12113492080079464E /* SampleController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +565,7 @@
 				D4C4E9D811348DB60079464E /* bg_signup.png in Resources */,
 				D4C4E9D911348DB60079464E /* btn_subscribe.png in Resources */,
 				D4C4E9DA11348DB60079464E /* btn_close.png in Resources */,
+				D4C4EA14113492080079464E /* SampleController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +576,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C4E99411348A860079464E /* NSObject+Missing.m in Sources */,
 				D4C4E99511348A860079464E /* CKCampaign.m in Sources */,
 				D4C4E99611348A860079464E /* CKList.m in Sources */,
 				D4C4E99711348A860079464E /* CKMember.m in Sources */,
@@ -598,6 +600,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* ChimpKitAppDelegate.m in Sources */,
 				D4C4E9CB11348D910079464E /* CKDialogController.m in Sources */,
+				D4C4EA11113492080079464E /* SampleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,8 +610,6 @@
 			files = (
 				D4BB71191112824B00FD7C7F /* GHUnitIPhoneTestMain.m in Sources */,
 				D4BB711B1112824B00FD7C7F /* Makefile in Sources */,
-				D4BB717B11129DE600FD7C7F /* InvocationTest.m in Sources */,
-				D4D1162C1115436E0064E162 /* NSObject+Missing.m in Sources */,
 				D4C97DBE1117D45D0071E2E6 /* CKCampaign.m in Sources */,
 				D4C97DC11117D50C0071E2E6 /* CKList.m in Sources */,
 				D4C97DC51117D5730071E2E6 /* CKMember.m in Sources */,
@@ -634,6 +635,7 @@
 				D4DE8064111BA8C600CAAFFB /* ChimpKitTest.m in Sources */,
 				D4E958D511207D86005BD511 /* CKListTest.m in Sources */,
 				D4C4E9CC11348D910079464E /* CKDialogController.m in Sources */,
+				D4C4EA13113492080079464E /* SampleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

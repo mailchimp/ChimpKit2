@@ -1,6 +1,5 @@
 #import "GHUnit.h"
 #import "GHAsyncTestCase.h"
-#import "NSObject+Missing.h"
 #import "CKList.h"
 
 @interface CKListTest : GHAsyncTestCase { 

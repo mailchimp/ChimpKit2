@@ -58,7 +58,6 @@ static CGFloat bounceDuration = 0.4;
   
   [[self window] addSubview:self.view];
   
-  
   self.dialog.transform = CGAffineTransformScale(CGAffineTransformIdentity, 3, 3);
   
   [UIView beginAnimations:nil context:nil];

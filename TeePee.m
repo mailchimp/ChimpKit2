@@ -7,10 +7,10 @@
 //
 
 #import "TeePee.h"
-#import "NSObject+Missing.h"
 #import "NSDictionary+Parameterize.h"
 
 #define TEE_PEE_KEYS [NSArray arrayWithObjects:@"delegate",@"onSuccess",@"onFailure",@"get",@"post",@"put",@"delete",nil]
+#define LOTS_OF_ARGS "@^v@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
 @implementation TeePee
 
@@ -138,6 +138,86 @@
   [self parseParamDefaults:params];
   [self dispatchRequest:method 
              withParams:params];
+}
+
+
+
+
++ (void)forwardInvocation:(NSInvocation *)invocation
+{
+  [self handleInvocation:invocation];
+}
+
+- (void)forwardInvocation:(NSInvocation *)invocation
+{
+  [self handleInvocation:invocation];
+}
+
++ (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
+{
+  return [self formatDynamicSignature];
+}
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
+{
+  return [[self class] formatDynamicSignature];
+}
+
++ (NSMethodSignature*)formatDynamicSignature
+{
+  return [NSMethodSignature signatureWithObjCTypes:LOTS_OF_ARGS];
+}
+
++ (void)handleInvocation:(NSInvocation*)invocation
+{
+  NSString        *selectorString = NSStringFromSelector([invocation selector]);
+  NSArray         *parts          = [selectorString componentsSeparatedByString: @":"];
+  NSArray         *keys           = [parts objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [parts count]-1)]];
+  NSMutableArray  *values         = [[NSMutableArray alloc] init];
+  
+  for (int i=0; i<[keys count]; i++) {
+    id arg;
+    [invocation getArgument:&arg atIndex:i+2];
+    [values addObject:arg];
+  }
+  
+  NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values 
+                                                            forKeys:keys];
+  
+  if ([self respondsToSelector:@selector(methodMissing:withParams:)]) {
+    
+    [self performSelector:@selector(methodMissing:withParams:) 
+               withObject:selectorString 
+               withObject:params];
+    
+  }
+  [values release];
+}
+
+
+- (void)handleInvocation:(NSInvocation*)invocation
+{
+  NSString        *selectorString = NSStringFromSelector([invocation selector]);
+  NSArray         *parts          = [selectorString componentsSeparatedByString: @":"];
+  NSArray         *keys           = [parts objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [parts count]-1)]];
+  NSMutableArray  *values         = [[NSMutableArray alloc] init];
+  
+  for (int i=0; i<[keys count]; i++) {
+    id arg;
+    [invocation getArgument:&arg atIndex:i+2];
+    [values addObject:arg];
+  }
+  
+  NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values 
+                                                            forKeys:keys];
+  
+  if ([self respondsToSelector:@selector(methodMissing:withParams:)]) {
+    
+    [self performSelector:@selector(methodMissing:withParams:) 
+               withObject:selectorString 
+               withObject:params];
+    
+  }
+  [values release];
 }
 
 

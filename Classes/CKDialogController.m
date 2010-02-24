@@ -8,15 +8,17 @@
 
 #import "CKDialogController.h"
 
+
 static CGFloat bounceDuration = 0.4;
 
 @implementation CKDialogController
 
-@synthesize dialog, closeBtn, signupBtn, emailInput, onSuccess, onFailure, delegate;
+@synthesize dialog, closeBtn, signupBtn, emailInput, onSuccess, onFailure, delegate, list, listID;
 
 
 - (void)dealloc 
 {
+  delegate = NULL;
   [super dealloc];
 }
 
@@ -122,7 +124,7 @@ static CGFloat bounceDuration = 0.4;
     valid = (BOOL)[self.delegate performSelector:@selector(validateEmailAddress:) 
                                       withObject:emailInput.text];
   }
-  
+  NSLog(@"fooo");
   if (valid) {
     [self performSignup];
   }else {
@@ -135,6 +137,17 @@ static CGFloat bounceDuration = 0.4;
 {
   self.signupBtn.enabled = NO;
   [self dismissDialog:nil];
+  
+  NSLog(@"%@",self.delegate);
+  
+  
+  list            = [[CKList alloc] initWithDelegate:delegate];
+  list.onFailure  = self.onSuccess;
+  list.onSuccess  = self.onFailure;
+  
+  [list subscribe:self.listID 
+        withEmail:self.emailInput.text 
+      sendWelcome:NO];
 }
 
 - (UIView*)window

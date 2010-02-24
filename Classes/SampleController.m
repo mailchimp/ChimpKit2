@@ -13,10 +13,13 @@
 
 - (IBAction)showDialog
 {
-  CKDialogController *dialog = [[CKDialogController alloc] initWithDelegate:self];
+  [ChimpKit setAPIKey:@"1df3dda132dc2338706decdd08198719-us1"];
   
-  dialog.onSuccess = @selector(signupDidSucceed:);
-  dialog.onFailure = @selector(signupDidFail:);
+  CKDialogController *dialog = [[CKDialogController alloc] initWithDelegate:self];
+
+  dialog.listID     = @"e892b61220";  
+  dialog.onSuccess  = @selector(signupDidSucceed:);
+  dialog.onFailure  = @selector(signupDidFail:);
   
   [dialog show];
 }
@@ -28,16 +31,12 @@
 
 - (void)signupDidFail:(id)data
 {
-  NSLog(@"fail!!");
+  NSLog(@"failed with %@",data);
 }
 
 - (BOOL)validateEmailAddress:(NSString*)address
 {
-  if ([address isEqualToString:@"me@me.com"]) {
-    return YES;
-  }else{
-    return NO;
-  }
+  return YES;
 }
 
 

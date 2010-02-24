@@ -204,7 +204,13 @@
   for (int i=0; i<[keys count]; i++) {
     id arg;
     [invocation getArgument:&arg atIndex:i+2];
-    [values addObject:arg];
+    if (arg != nil) {
+      [values addObject:arg];
+    }else {
+      [values addObject:@""];
+    }
+  
+      
   }
   
   NSDictionary *params = [NSMutableDictionary dictionaryWithObjects:values 

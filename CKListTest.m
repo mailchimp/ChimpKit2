@@ -39,4 +39,21 @@
   NSLog(@"failed with %@",[request error]);
 }
 
+
+- (void)testSignup
+{
+  list.onFailure  = @selector(didFail:);
+  list.onSuccess  = @selector(didSignup:);
+  [self prepare];
+  [list subscribe:@"e892b61220" withEmail:@"signalstatic@gmail.com" sendWelcome:NO];
+  [self waitForStatus:kGHUnitWaitStatusSuccess timeout:2.0];
+}
+
+- (void)didSignup:(NSDictionary*)data
+{
+  [self notify:kGHUnitWaitStatusSuccess forSelector:@selector(testSignup)];
+  NSLog(@"%@",data);
+  //GHAssertTrue([data respondsToSelector:@selector(objectAtIndex:)],nil);
+}
+
 @end

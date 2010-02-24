@@ -55,13 +55,9 @@
          startingAt:(NSNumber*)start 
           withLimit:(NSNumber*)limit;
 
+
 - (void)subscribe:(NSString*)listId 
         withEmail:(NSString*)email 
-        mergeVars:(NSArray*)vars 
-        emailType:(NSString*)type 
-      doubleOptin:(BOOL)optin 
-   updateExisting:(BOOL)update 
- replaceInterests:(BOOL)replace 
       sendWelcome:(BOOL)welcome;
 
 - (void)unsubscribe:(NSString*)listId 

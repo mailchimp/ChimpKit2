@@ -90,21 +90,9 @@
 
 - (void)subscribe:(NSString*)listId 
         withEmail:(NSString*)email 
-        mergeVars:(NSArray*)vars 
-        emailType:(NSString*)type 
-      doubleOptin:(BOOL)optin 
-   updateExisting:(BOOL)update 
- replaceInterests:(BOOL)replace 
       sendWelcome:(BOOL)welcome
 {
-  [self get:@"/" method:@"listSubscribe"
-          email_address:email
-             merge_vars:vars
-             email_type:type
-           double_optin:optin
-        update_existing:update
-      replace_interests:replace
-           send_welcome:welcome];
+  [self get:@"/" method:@"listSubscribe" id:listId merge_vars:@"" email_address:email send_welcome:welcome];
 }
 
 - (void)unsubscribe:(NSString*)listId 

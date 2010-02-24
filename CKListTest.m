@@ -14,6 +14,7 @@
 
 - (void)setUp
 {
+  [ChimpKit setAPIKey:@"1df3dda132dc2338706decdd08198719-us1"];
   list            = [[CKList alloc] initWithDelegate:self];
   list.onFailure  = @selector(didFail:);
   list.onSuccess  = @selector(didLoadLists:);
@@ -28,6 +29,7 @@
 
 - (void)didLoadLists:(NSDictionary*)data
 {
+  NSLog(@"%@",data);
   [self notify:kGHUnitWaitStatusSuccess forSelector:@selector(testLists)];
   GHAssertTrue([data respondsToSelector:@selector(objectAtIndex:)],nil);
 }

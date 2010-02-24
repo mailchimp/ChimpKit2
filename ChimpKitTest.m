@@ -14,6 +14,7 @@
 
 - (void)setUp
 {
+  [ChimpKit setAPIKey:@"1df3dda132dc2338706decdd08198719-us1"];
   ck            = [[ChimpKit alloc] initWithDelegate:self];
   ck.onFailure  = @selector(didFail:);
   ck.onSuccess  = @selector(didLoad:);

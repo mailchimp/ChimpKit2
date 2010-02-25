@@ -26,7 +26,13 @@
 
 - (void)signupDidSucceed:(id)data
 {
-  NSLog(@"sucess!!");
+  UIAlertView *alert	= [[UIAlertView alloc] initWithTitle:nil 
+                                                  message:@"You have been signed up."
+                                                 delegate:self 
+                                        cancelButtonTitle:@"OK" 
+                                        otherButtonTitles:nil]; 
+  [alert show]; 
+  [alert release];
 }
 
 - (void)signupDidFail:(id)data

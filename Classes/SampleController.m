@@ -31,7 +31,13 @@
 
 - (void)signupDidFail:(id)data
 {
-  NSLog(@"failed with %@",data);
+  UIAlertView *alert	= [[UIAlertView alloc] initWithTitle:nil 
+                                                  message:[data objectForKey:@"error"]
+                                                 delegate:self 
+                                        cancelButtonTitle:@"OK" 
+                                        otherButtonTitles:nil]; 
+  [alert show]; 
+  [alert release];
 }
 
 - (BOOL)validateEmailAddress:(NSString*)address

@@ -324,7 +324,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D449CAD1111281270045CBAC</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SampleController.m</string>
+								<string>TeePee.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -332,11 +332,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D449CAD2111281270045CBAC</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SampleController.m</string>
+										<string>TeePee.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D4F27CB01135C92300D5CB56</string>
+										<string>D4F27CEF113643AD00D5CB56</string>
 										<key>history</key>
 										<array>
 											<string>D4C8A853111A6F4E009CFDFF</string>
@@ -362,10 +362,10 @@
 											<string>D4F27BA81135B49000D5CB56</string>
 											<string>D4F27C911135C4AB00D5CB56</string>
 											<string>D4F27C921135C4AB00D5CB56</string>
-											<string>D4F27CA41135C8CB00D5CB56</string>
 											<string>D4F27CA51135C8CB00D5CB56</string>
 											<string>D4F27CA61135C8CB00D5CB56</string>
-											<string>D4F27CAF1135C91D00D5CB56</string>
+											<string>D4F27CEB113643A100D5CB56</string>
+											<string>D4F27CEA1136438B00D5CB56</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -682,7 +682,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D4F27CAD1135C8EB00D5CB56</string>
 		<string>D4F27B891135A68100D5CB56</string>
 		<string>D4F27B831135A62E00D5CB56</string>
 		<string>/Users/twoism/dev/ruby/github/chimp_kit/ChimpKit.xcodeproj</string>

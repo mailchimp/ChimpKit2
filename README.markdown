@@ -7,11 +7,15 @@ API wrapper for the [mailchimp.com](http://mailchimp.com/api "MailChimp API") AP
     
 Get your API key from [http://admin.mailchimp.com/account/api](http://admin.mailchimp.com/account/api/ "MailChimp API").
 
+**Setup ASIHTTPRequest**
+
 ChimpKit is built on ASIHTTPRequest by All-Seeing Interactive. For installation instructions see [http://allseeing-i.com/ASIHTTPRequest/](http://allseeing-i.com/ASIHTTPRequest/).
 
-### Adding ChimpKit to a project 
+**Adding ChimpKit to a project**
 
 Create a new project in XCode. Open ChimpKit.xcodeproj and locate the ChimpKit directory. Drag this directory into your project and start using ChimpKit.
+    
+-------------------
     
 ###CKDialogController 
 
@@ -35,6 +39,17 @@ You can optionally implement a validation method on the delegate if needed.
       // Do validation stuffs
       return YES;
     }
+
+### Accessing the API ###
+
+ChimpKit provides a few classes for accessing the MailChimp API
+
+    CKList
+    CKCampaign 
+    CKHelperMethods
+    
+The documentation for these classes and there methods can be found here [http://mailchimp.com/api](http://mailchimp.com/api). The parameters for these methods are the objective-c counterparts of the types and values described in MailChimp's API docs.
+    
 
 ###License
 

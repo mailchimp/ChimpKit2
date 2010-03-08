@@ -11,7 +11,7 @@ ChimpKit is built on ASIHTTPRequest by All-Seeing Interactive. For installation 
     
 ###Usage 
 
-ChimpKit has a pre-built signup controller for easy access to your MailChimp mailing lists.
+ChimpKit has a pre-built signup controller for easy access to your MailChimp mailing lists. This controller launches a dialog that can be used to simply gather users email addresses from within your iPhone or iPad application.
 
     #import "CKDialogController.h"
     
@@ -23,6 +23,7 @@ ChimpKit has a pre-built signup controller for easy access to your MailChimp mai
     dialog.onSuccess  = @selector(signupDidSucceed:);
     dialog.onFailure  = @selector(signupDidFail:);
 	
+	  [dialog show];
 
 ###License
 

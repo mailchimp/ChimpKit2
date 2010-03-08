@@ -6,19 +6,23 @@ API wrapper for the [mailchimp.com](http://mailchimp.com/api "MailChimp API") AP
 ###Install & Setup
     
 Get your API key from [http://admin.mailchimp.com/account/api](http://admin.mailchimp.com/account/api/ "MailChimp API").
-    
-###Usage
 
-	See Headers for now.
+ChimpKit is built on ASIHTTPRequest by All-Seeing Interactive. For installation instructions see [http://allseeing-i.com/ASIHTTPRequest/](http://allseeing-i.com/ASIHTTPRequest/).
+    
+###Usage 
+
+ChimpKit has a pre-built signup controller for easy access to your MailChimp mailing lists.
+
+    #import "CKDialogController.h"
+    
+    [ChimpKit setAPIKey:@"<your api key>"];
+    
+    CKDialogController *dialog = [[CKDialogController alloc] initWithDelegate:self];
+
+    dialog.listID     = @"<your list id>";  
+    dialog.onSuccess  = @selector(signupDidSucceed:);
+    dialog.onFailure  = @selector(signupDidFail:);
 	
-	Under the hood API communication will be handled in ChimpKit.m through the following DSL:
-	
-    [ChimpKit get:@"<api_method>" 
-            param:@"value" 
-      other_param:@"value" 
-        onSuccess:@selector(doSomething:) 
-        onFailure:@selector(doSomthingElse:) 
-         delegate:self];
 
 ###License
 

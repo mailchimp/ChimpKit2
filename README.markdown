@@ -8,10 +8,12 @@ API wrapper for the [mailchimp.com](http://mailchimp.com/api "MailChimp API") AP
 Get your API key from [http://admin.mailchimp.com/account/api](http://admin.mailchimp.com/account/api/ "MailChimp API").
 
 ChimpKit is built on ASIHTTPRequest by All-Seeing Interactive. For installation instructions see [http://allseeing-i.com/ASIHTTPRequest/](http://allseeing-i.com/ASIHTTPRequest/).
+
+Create a new project in XCode. Open ChimpKit.xcodeproj and locate the ChimpKit directory. Drag this directory into your project and start using ChimpKit.
     
 ###Usage 
 
-ChimpKit has a pre-built signup controller for easy access to your MailChimp mailing lists. This controller launches a dialog that can be used to simply gather users email addresses from within your iPhone or iPad application.
+ChimpKit has a pre-built signup controller for easy access to your MailChimp mailing lists. This controller launches a dialog that can be used to simply gather users email addresses from within your iPhone or iPad application. All that is required is an API Key and the id for the list that you wish to use.
 
     #import "CKDialogController.h"
     
@@ -22,8 +24,7 @@ ChimpKit has a pre-built signup controller for easy access to your MailChimp mai
     dialog.listID     = @"<your list id>";  
     dialog.onSuccess  = @selector(signupDidSucceed:);
     dialog.onFailure  = @selector(signupDidFail:);
-	
-	  [dialog show];
+    [dialog show];
 
 ###License
 

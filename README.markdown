@@ -13,7 +13,7 @@ ChimpKit is built on ASIHTTPRequest by All-Seeing Interactive. For installation 
 
 Create a new project in XCode. Open ChimpKit.xcodeproj and locate the ChimpKit directory. Drag this directory into your project and start using ChimpKit.
     
-###Usage 
+###CKDialogController 
 
 ChimpKit has a pre-built signup controller for easy access to your MailChimp mailing lists. This controller launches a dialog that can be used to simply gather users email addresses from within your iPhone or iPad application. All that is required is an API Key and the id for the list that you wish to use.
 

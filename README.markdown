@@ -48,7 +48,7 @@ ChimpKit provides a few classes for accessing the MailChimp API
     CKCampaign 
     CKHelperMethods
     
-The documentation for these classes and there methods can be found here [http://mailchimp.com/api](http://mailchimp.com/api). The parameters for these methods are the objective-c counterparts of the types and values described in MailChimp's API docs.
+The documentation for these classes and there methods can be found here [http://www.mailchimp.com/api/1.2/](http://www.mailchimp.com/api/1.2/). The parameters for these methods are the objective-c counterparts of the types and values described in MailChimp's API docs.
     
 
 ###License

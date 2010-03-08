@@ -9,6 +9,8 @@ Get your API key from [http://admin.mailchimp.com/account/api](http://admin.mail
 
 ChimpKit is built on ASIHTTPRequest by All-Seeing Interactive. For installation instructions see [http://allseeing-i.com/ASIHTTPRequest/](http://allseeing-i.com/ASIHTTPRequest/).
 
+### Adding ChimpKit to a project 
+
 Create a new project in XCode. Open ChimpKit.xcodeproj and locate the ChimpKit directory. Drag this directory into your project and start using ChimpKit.
     
 ###Usage 
@@ -25,6 +27,14 @@ ChimpKit has a pre-built signup controller for easy access to your MailChimp mai
     dialog.onSuccess  = @selector(signupDidSucceed:);
     dialog.onFailure  = @selector(signupDidFail:);
     [dialog show];
+    
+You can optionally implement a validation method on the delegate if needed.
+
+    - (BOOL)validateEmailAddress:(NSString*)address
+    {
+      // Do validation stuffs
+      return YES;
+    }
 
 ###License
 

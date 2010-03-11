@@ -6,19 +6,50 @@ API wrapper for the [mailchimp.com](http://mailchimp.com/api "MailChimp API") AP
 ###Install & Setup
     
 Get your API key from [http://admin.mailchimp.com/account/api](http://admin.mailchimp.com/account/api/ "MailChimp API").
-    
-###Usage
 
-	See Headers for now.
-	
-	Under the hood API communication will be handled in ChimpKit.m through the following DSL:
-	
-    [ChimpKit get:@"<api_method>" 
-            param:@"value" 
-      other_param:@"value" 
-        onSuccess:@selector(doSomething:) 
-        onFailure:@selector(doSomthingElse:) 
-         delegate:self];
+**Setup ASIHTTPRequest**
+
+ChimpKit is built on ASIHTTPRequest by All-Seeing Interactive. For installation instructions see [http://allseeing-i.com/ASIHTTPRequest/](http://allseeing-i.com/ASIHTTPRequest/).
+
+**Adding ChimpKit to a project**
+
+Create a new project in XCode. Open ChimpKit.xcodeproj and locate the ChimpKit directory. Drag this directory into your project and start using ChimpKit.
+    
+-------------------
+    
+###CKDialogController 
+
+ChimpKit has a pre-built signup controller for easy access to your MailChimp mailing lists. This controller launches a dialog that can be used to simply gather users email addresses from within your iPhone or iPad application. All that is required is an API Key and the id for the list that you wish to use.
+
+    #import "CKDialogController.h"
+    
+    [ChimpKit setAPIKey:@"<your api key>"];
+    
+    CKDialogController *dialog = [[CKDialogController alloc] initWithDelegate:self];
+
+    dialog.listID     = @"<your list id>";  
+    dialog.onSuccess  = @selector(signupDidSucceed:);
+    dialog.onFailure  = @selector(signupDidFail:);
+    [dialog show];
+    
+You can optionally implement a validation method on the delegate if needed.
+
+    - (BOOL)validateEmailAddress:(NSString*)address
+    {
+      // Do validation stuffs
+      return YES;
+    }
+
+### Accessing the API ###
+
+ChimpKit provides a few classes for accessing the MailChimp API
+
+    CKList
+    CKCampaign 
+    CKHelperMethods
+    
+The documentation for these classes and there methods can be found here [http://www.mailchimp.com/api/1.2/](http://www.mailchimp.com/api/1.2/). The parameters for these methods are the objective-c counterparts of the types and values described in MailChimp's API docs.
+    
 
 ###License
 

@@ -11,27 +11,34 @@
 
 @implementation CKHelperMethods
 
-+ (void)creeateFolder:(NSString*)name
+- (void)chimpChatter
 {
+  [self get:@"/" method:@"chimpChatter"];
   
 }
-+ (void)generateText:(NSString*)type 
+
+- (void)creeateFolder:(NSString*)name
+{
+  [self get:@"/" method:@"createFolder"];
+
+}
+- (void)generateText:(NSString*)type 
          fromContent:(NSString*)content
 {
-  
+  [self get:@"/" method:@"generateText" type:type content:content];
 }
-+ (void)getAccountDetails
+- (void)getAccountDetails
 {
-  
+  [self get:@"/" method:@"getAccountDetails"];
 }
-+ (void)inlineCss:(NSString*)html 
+- (void)inlineCss:(NSString*)html 
          stripCss:(BOOL)strip
 {
-  
+  [self get:@"/" method:@"inlineCss" html:html strip_css:strip];
 }
-+ (void)ping
+- (void)ping
 {
-  
+  [self get:@"/" method:@"ping"];
 }
 
 @end

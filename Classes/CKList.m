@@ -16,7 +16,7 @@
            withLimit:(NSNumber*)limit
            sinceDate:(NSString*)since
 {
-  
+  [self get:@"/" method:@"listAbuseReports" id:listId start:start limit:limit since:since];
 }
 
 - (void)batchSubscribe:(NSString*)listId 
@@ -25,7 +25,7 @@
         updateExisting:(BOOL)update 
       replaceInterests:(BOOL)replace
 {
-  
+  [self get:@"/" method:@"listBatchSubscribe" id:listId double_optin:optIn update_existing:update replace_interests:replace];
 }
 
 - (void)batchUnsubscribe:(NSString*)listId 
@@ -34,33 +34,31 @@
              sendGoodbye:(BOOL)goodbye 
               sendNotify:(BOOL)notify
 {
-  
+  [self get:@"/" method:@"listBatchUnsubscribe" id:listId email:emails delete_member:deleteMember send_goodbye:goodbye send_notify:notify];
 }
 
 - (void)growthHistory:(NSString*)listId
 {
-  
+  [self get:@"/" method:@"listGrowthHistory" id:listId];
 }
 
 - (void)interestGroupAdd:(NSString*)listId 
                groupName:(NSString*)name
 {
-  
+  [self get:@"/" method:@"listInterestGroupAdd" id:listId group_name:name];  
 }
 
 - (void)interestGroupDelete:(NSString*)listId 
-                    groupId:(NSString*)groupId 
                   groupName:(NSString*)name
 {
-  
+  [self get:@"/" method:@"listInterestGroupDelete" id:listId group_name:name];
 }
 
 - (void)interestGroupUpdate:(NSString*)listId 
-                    groupId:(NSString*)groupId 
                     oldName:(NSString*)oldName 
                     newName:(NSString*)newName
 {
-  
+  [self get:@"/" method:@"listInterestGroupUpdate" id:listId old_name:oldName new_name:newName];
 }
 
 - (void)interestGroups:(NSString*)listId
@@ -101,12 +99,7 @@
         sendGoodbye:(BOOL)goodbye
          sendNotify:(BOOL)notify
 {
-  [self get:@"/" 
-     method:@"listUnsubscribe" 
-email_address:email 
-delete_member:deleteMember
-send_goodbye:goodbye
-send_notify:notify];
+  [self get:@"/" method:@"listUnsubscribe" email_address:email delete_member:deleteMember send_goodbye:goodbye send_notify:notify];
 }
 
 - (void)findAll

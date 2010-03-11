@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ChimpKit.h"
 
-@interface CKList : ChimpKit {
-
-}
+@interface CKList : ChimpKit { }
 
 - (void)abuseReports:(NSString*)listId 
           startingAt:(NSNumber*)start 

@@ -46,7 +46,6 @@
 		D4BF21E9111A377700B7A509 /* TeePee.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21E8111A377700B7A509 /* TeePee.m */; };
 		D4C4E99511348A860079464E /* CKCampaign.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DBD1117D45D0071E2E6 /* CKCampaign.m */; };
 		D4C4E99611348A860079464E /* CKList.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC01117D50C0071E2E6 /* CKList.m */; };
-		D4C4E99711348A860079464E /* CKMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC41117D5730071E2E6 /* CKMember.m */; };
 		D4C4E99811348A860079464E /* CKHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */; };
 		D4C4E99911348A860079464E /* ChimpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */; };
 		D4C4E99A11348A860079464E /* TeePee.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF21E8111A377700B7A509 /* TeePee.m */; };
@@ -83,7 +82,6 @@
 		D4C8A948111B1B13009CFDFF /* NSArray+Parametrize.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C8A947111B1B13009CFDFF /* NSArray+Parametrize.m */; };
 		D4C97DBE1117D45D0071E2E6 /* CKCampaign.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DBD1117D45D0071E2E6 /* CKCampaign.m */; };
 		D4C97DC11117D50C0071E2E6 /* CKList.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC01117D50C0071E2E6 /* CKList.m */; };
-		D4C97DC51117D5730071E2E6 /* CKMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC41117D5730071E2E6 /* CKMember.m */; };
 		D4C97DC81117D5B00071E2E6 /* CKHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */; };
 		D4C97DCB1117D7AD0071E2E6 /* ChimpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C97DCA1117D7AD0071E2E6 /* ChimpKit.m */; };
 		D4DE8064111BA8C600CAAFFB /* ChimpKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DE8063111BA8C600CAAFFB /* ChimpKitTest.m */; };
@@ -174,8 +172,6 @@
 		D4C97DBD1117D45D0071E2E6 /* CKCampaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCampaign.m; sourceTree = "<group>"; };
 		D4C97DBF1117D50C0071E2E6 /* CKList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKList.h; sourceTree = "<group>"; };
 		D4C97DC01117D50C0071E2E6 /* CKList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKList.m; sourceTree = "<group>"; };
-		D4C97DC31117D5730071E2E6 /* CKMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMember.h; sourceTree = "<group>"; };
-		D4C97DC41117D5730071E2E6 /* CKMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMember.m; sourceTree = "<group>"; };
 		D4C97DC61117D5B00071E2E6 /* CKHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHelperMethods.h; sourceTree = "<group>"; };
 		D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHelperMethods.m; sourceTree = "<group>"; };
 		D4C97DC91117D7AD0071E2E6 /* ChimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChimpKit.h; sourceTree = "<group>"; };
@@ -334,8 +330,6 @@
 				D4C97DBD1117D45D0071E2E6 /* CKCampaign.m */,
 				D4C97DBF1117D50C0071E2E6 /* CKList.h */,
 				D4C97DC01117D50C0071E2E6 /* CKList.m */,
-				D4C97DC31117D5730071E2E6 /* CKMember.h */,
-				D4C97DC41117D5730071E2E6 /* CKMember.m */,
 				D4C97DC61117D5B00071E2E6 /* CKHelperMethods.h */,
 				D4C97DC71117D5B00071E2E6 /* CKHelperMethods.m */,
 				D4C97DC91117D7AD0071E2E6 /* ChimpKit.h */,
@@ -578,7 +572,6 @@
 			files = (
 				D4C4E99511348A860079464E /* CKCampaign.m in Sources */,
 				D4C4E99611348A860079464E /* CKList.m in Sources */,
-				D4C4E99711348A860079464E /* CKMember.m in Sources */,
 				D4C4E99811348A860079464E /* CKHelperMethods.m in Sources */,
 				D4C4E99911348A860079464E /* ChimpKit.m in Sources */,
 				D4BF21A6111A331D00B7A509 /* ASIInputStream.m in Sources */,
@@ -612,7 +605,6 @@
 				D4BB711B1112824B00FD7C7F /* Makefile in Sources */,
 				D4C97DBE1117D45D0071E2E6 /* CKCampaign.m in Sources */,
 				D4C97DC11117D50C0071E2E6 /* CKList.m in Sources */,
-				D4C97DC51117D5730071E2E6 /* CKMember.m in Sources */,
 				D4C97DC81117D5B00071E2E6 /* CKHelperMethods.m in Sources */,
 				D4C97DCB1117D7AD0071E2E6 /* ChimpKit.m in Sources */,
 				D4BF21A1111A331D00B7A509 /* ASIInputStream.m in Sources */,

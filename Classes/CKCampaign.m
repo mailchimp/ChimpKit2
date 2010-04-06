@@ -11,7 +11,7 @@
 
 @implementation CKCampaign
 
-- (void)content:(NSString*)campaignId forArchive:(BOOL)archive
+- (void)content:(NSString*)campaignId forArchive:(NSString*)archive
 {
   [self get:@"/" method:@"campaignContent" cid:campaignId for_archive:archive];
 

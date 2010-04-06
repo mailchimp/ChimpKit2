@@ -21,18 +21,18 @@
 
 - (void)batchSubscribe:(NSString*)listId 
              withBatch:(NSArray*)batch 
-           doubleOptIn:(BOOL)optIn 
-        updateExisting:(BOOL)update 
-      replaceInterests:(BOOL)replace
+           doubleOptIn:(NSString*)optIn 
+        updateExisting:(NSString*)update 
+      replaceInterests:(NSString*)replace
 {
   [self get:@"/" method:@"listBatchSubscribe" id:listId double_optin:optIn update_existing:update replace_interests:replace];
 }
 
 - (void)batchUnsubscribe:(NSString*)listId 
                   emails:(NSArray*)emails 
-            deleteMember:(BOOL)deleteMember 
-             sendGoodbye:(BOOL)goodbye 
-              sendNotify:(BOOL)notify
+            deleteMember:(NSString*)deleteMember 
+             sendGoodbye:(NSString*)goodbye 
+              sendNotify:(NSString*)notify
 {
   [self get:@"/" method:@"listBatchUnsubscribe" id:listId email:emails delete_member:deleteMember send_goodbye:goodbye send_notify:notify];
 }
@@ -88,16 +88,16 @@
 
 - (void)subscribe:(NSString*)listId 
         withEmail:(NSString*)email 
-      sendWelcome:(BOOL)welcome
+      sendWelcome:(NSString*)welcome
 {
   [self get:@"/" method:@"listSubscribe" id:listId merge_vars:@"" email_address:email send_welcome:welcome];
 }
 
 - (void)unsubscribe:(NSString*)listId 
           withEmail:(NSString*)email 
-       deleteMember:(BOOL)deleteMember
-        sendGoodbye:(BOOL)goodbye
-         sendNotify:(BOOL)notify
+       deleteMember:(NSString*)deleteMember
+        sendGoodbye:(NSString*)goodbye
+         sendNotify:(NSString*)notify
 {
   [self get:@"/" method:@"listUnsubscribe" email_address:email delete_member:deleteMember send_goodbye:goodbye send_notify:notify];
 }

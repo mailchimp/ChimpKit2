@@ -14,7 +14,7 @@
 - (void)creeateFolder:(NSString*)name;
 - (void)generateText:(NSString*)type fromContent:(NSString*)content;
 - (void)getAccountDetails;
-- (void)inlineCss:(NSString*)html stripCss:(BOOL)strip;
+- (void)inlineCss:(NSString*)html stripCss:(NSString*)strip;
 - (void)ping;
 @end
 
@@ -22,6 +22,6 @@
 - (void)get:(NSString*)path method:(NSString*)methodName;
 - (void)get:(NSString*)path method:(NSString*)methodName type:(NSString*)type content:(NSString*)content;
 - (void)get:(NSString*)path method:(NSString*)methodName;
-- (void)get:(NSString*)path method:(NSString*)methodName html:(NSString*)html strip_css:(BOOL)strip;
+- (void)get:(NSString*)path method:(NSString*)methodName html:(NSString*)html strip_css:(NSString*)strip;
 @end
 

@@ -45,7 +45,7 @@
   list.onFailure  = @selector(didFail:);
   list.onSuccess  = @selector(didSignup:);
   [self prepare];
-  [list subscribe:@"e892b61220" withEmail:@"signalstatic@gmail.com" sendWelcome:NO];
+  [list subscribe:@"e892b61220" withEmail:@"signalstatic@gmail.com" sendWelcome:@"false"];
   [self waitForStatus:kGHUnitWaitStatusSuccess timeout:2.0];
 }
 

@@ -18,15 +18,15 @@
 
 - (void)batchSubscribe:(NSString*)listId 
              withBatch:(NSArray*)batch 
-           doubleOptIn:(BOOL)optIn 
-        updateExisting:(BOOL)update 
-      replaceInterests:(BOOL)replace;
+           doubleOptIn:(NSString*)optIn 
+        updateExisting:(NSString*)update 
+      replaceInterests:(NSString*)replace;
 
 - (void)batchUnsubscribe:(NSString*)listId 
                   emails:(NSArray*)emails 
-            deleteMember:(BOOL)deleteMember 
-             sendGoodbye:(BOOL)goodbye 
-              sendNotify:(BOOL)notify;
+            deleteMember:(NSString*)deleteMember 
+             sendGoodbye:(NSString*)goodbye 
+              sendNotify:(NSString*)notify;
 
 - (void)growthHistory:(NSString*)listId;
 
@@ -54,13 +54,13 @@
 
 - (void)subscribe:(NSString*)listId 
         withEmail:(NSString*)email 
-      sendWelcome:(BOOL)welcome;
+      sendWelcome:(NSString*)welcome;
 
 - (void)unsubscribe:(NSString*)listId 
           withEmail:(NSString*)email 
-       deleteMember:(BOOL)deleteMember
-        sendGoodbye:(BOOL)goodbye
-         sendNotify:(BOOL)notify;
+       deleteMember:(NSString*)deleteMember
+        sendGoodbye:(NSString*)goodbye
+         sendNotify:(NSString*)notify;
 
 - (void)findAll;
 
@@ -68,16 +68,16 @@
 
 @interface CKList(Squelch)
 - (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId start:(NSNumber *)start limit:(NSNumber *)limit since:(NSString*)since;
-- (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId double_optin:(BOOL)optIn update_existing:(BOOL)update replace_interests:(BOOL)replace;
-- (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId email:(NSArray *)email delete_member:(BOOL)del send_goodbye:(BOOL)goodbye send_notify:(BOOL)notify;
+- (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId double_optin:(NSString*)optIn update_existing:(NSString*)update replace_interests:(NSString*)replace;
+- (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId email:(NSArray *)email delete_member:(NSString*)del send_goodbye:(NSString*)goodbye send_notify:(NSString*)notify;
 - (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId;
 - (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId group_name:(NSString *)name;
 - (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId old_name:(NSString *)old new_name:(NSString*)newName;
 - (void)get:(NSString *)path method:(NSString *)methodName email_address:(NSString*)email;
 - (void)get:(NSString *)path method:(NSString *)methodName status:(NSString *)status since:(NSString*)since start:(NSString*)start limit:(NSString*)limit;
-- (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId merge_vars:(NSString*)vars email_address:(NSString*)email send_welcome:(BOOL)welcome;
+- (void)get:(NSString *)path method:(NSString *)methodName id:(NSString *)listId merge_vars:(NSString*)vars email_address:(NSString*)email send_welcome:(NSString*)welcome;
 - (void)get:(NSString *)path method:(NSString *)methodName;
-- (void)get:(NSString *)path method:(NSString *)methodName email_address:(NSString *)email delete_member:(BOOL)deleteMember send_goodbye:(BOOL)goodbye send_notify:(BOOL)notify;
+- (void)get:(NSString *)path method:(NSString *)methodName email_address:(NSString *)email delete_member:(NSString*)deleteMember send_goodbye:(NSString*)goodbye send_notify:(NSString*)notify;
 
 @end
 

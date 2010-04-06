@@ -32,7 +32,7 @@
   [self get:@"/" method:@"getAccountDetails"];
 }
 - (void)inlineCss:(NSString*)html 
-         stripCss:(BOOL)strip
+         stripCss:(NSString*)strip
 {
   [self get:@"/" method:@"inlineCss" html:html strip_css:strip];
 }

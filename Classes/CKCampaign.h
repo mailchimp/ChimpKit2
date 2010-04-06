@@ -12,7 +12,7 @@
 @interface CKCampaign : NSObject { }
 
 - (void)content:(NSString*)campaignId 
-     forArchive:(BOOL)archive;
+     forArchive:(NSString*)archive;
 
 - (void)createCampaign:(NSString*)type 
    withOptions:(NSDictionary*)options 
@@ -44,7 +44,7 @@ segmentOptions:(NSDictionary*)segOptions
 @end
 
 @interface CKCampaign(Squelch)
-- (void)get:(NSString *)path method:(NSString *)methodName cid:(NSString*)cid for_archive:(BOOL)archive;
+- (void)get:(NSString *)path method:(NSString *)methodName cid:(NSString*)cid for_archive:(NSString*)archive;
 - (void)get:(NSString *)path method:(NSString *)methodName type:(NSString*)type options:(NSDictionary*)opts content:(NSString*)content segment_opts:(NSDictionary*)segOpts type_opts:(NSDictionary*)typeOpts;
 - (void)get:(NSString *)path method:(NSString *)methodName cid:(NSString *)cid name:(NSString*)name value:(NSString*)value;
 - (void)get:(NSString *)path method:(NSString *)methodName cid:(NSString *)cid;

@@ -137,9 +137,7 @@ static CGFloat bounceDuration = 0.4;
 {
   self.signupBtn.enabled = NO;
   [self dismissDialog:nil];
-  
-  NSLog(@"%@",self.delegate);
-  
+
   
   list            = [[CKList alloc] initWithDelegate:delegate];
   list.onFailure  = self.onSuccess;

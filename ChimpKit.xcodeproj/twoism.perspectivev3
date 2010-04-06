@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Debug</string>
+	<string>Project</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -280,10 +280,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
-									<integer>16</integer>
-									<integer>15</integer>
-									<integer>14</integer>
+									<integer>13</integer>
+									<integer>5</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -305,6 +303,8 @@
 							<string>MainColumn</string>
 							<real>219</real>
 						</array>
+						<key>RubberWindowFrame</key>
+						<string>0 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -315,12 +315,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>D449CAD1111281270045CBAC</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TeePee.m</string>
+								<string>CKDialogController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +330,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D449CAD2111281270045CBAC</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TeePee.m</string>
+										<string>CKDialogController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D4D33CD7116AF0FB007DEDCB</string>
+										<string>D4D33CE7116AF1B5007DEDCB</string>
 										<key>history</key>
 										<array>
 											<string>D4C8A853111A6F4E009CFDFF</string>
@@ -345,22 +347,22 @@
 											<string>D4C4EB47113498A60079464E</string>
 											<string>D4C4EB7611349B180079464E</string>
 											<string>D4F27BA81135B49000D5CB56</string>
-											<string>D4F27CA51135C8CB00D5CB56</string>
-											<string>D4A46EB81148D9F400F905F8</string>
-											<string>D4A46EB91148D9F400F905F8</string>
 											<string>D4A46EBB1148D9F400F905F8</string>
-											<string>D4A46EBC1148D9F400F905F8</string>
-											<string>D4A46EBD1148D9F400F905F8</string>
-											<string>D4A46EBE1148D9F400F905F8</string>
-											<string>D4A46EBF1148D9F400F905F8</string>
 											<string>D4D33CA6116AEF1F007DEDCB</string>
-											<string>D4D33CA7116AEF1F007DEDCB</string>
-											<string>D4D33CAA116AEF1F007DEDCB</string>
 											<string>D4D33CCF116AF0F9007DEDCB</string>
 											<string>D4D33CD0116AF0F9007DEDCB</string>
 											<string>D4D33CD1116AF0F9007DEDCB</string>
-											<string>D4D33CD2116AF0F9007DEDCB</string>
-											<string>D4D33CD3116AF0F9007DEDCB</string>
+											<string>D4D33CDC116AF1B5007DEDCB</string>
+											<string>D4D33CDD116AF1B5007DEDCB</string>
+											<string>D4D33CDE116AF1B5007DEDCB</string>
+											<string>D4D33CDF116AF1B5007DEDCB</string>
+											<string>D4D33CE0116AF1B5007DEDCB</string>
+											<string>D4D33CE1116AF1B5007DEDCB</string>
+											<string>D4D33CE2116AF1B5007DEDCB</string>
+											<string>D4D33CE3116AF1B5007DEDCB</string>
+											<string>D4D33CE4116AF1B5007DEDCB</string>
+											<string>D4D33CE5116AF1B5007DEDCB</string>
+											<string>D4D33CE6116AF1B5007DEDCB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -375,6 +377,8 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1199, 565}}</string>
+								<key>RubberWindowFrame</key>
+								<string>0 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -413,7 +417,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {600, 175}}</string>
+										<string>{{10, 27}, {1199, 181}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -524,8 +530,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -537,8 +541,6 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1440, 238}}</string>
-						<key>RubberWindowFrame</key>
-						<string>0 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -613,11 +615,7 @@
 							</array>
 							<key>Frame</key>
 							<string>{{650, 0}, {790, 164}}</string>
-							<key>RubberWindowFrame</key>
-							<string>0 59 1440 819 0 0 1440 878 </string>
 						</dict>
-						<key>RubberWindowFrame</key>
-						<string>0 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -681,7 +679,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D4D33CD8116AF0FB007DEDCB</string>
 		<string>D4D33CBF116AEF61007DEDCB</string>
 		<string>D4D33CB7116AEF1F007DEDCB</string>
 		<string>/Users/twoism/dev/ruby/github/chimp_kit/ChimpKit.xcodeproj</string>

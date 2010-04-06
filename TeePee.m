@@ -98,7 +98,6 @@
       queryString     = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",key,value]];
     }
   }
-  NSLog(@"%@",queryString);
   return queryString;
 }
 

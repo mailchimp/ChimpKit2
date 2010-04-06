@@ -29,7 +29,6 @@
 
 - (void)didLoadLists:(NSDictionary*)data
 {
-  NSLog(@"%@",data);
   [self notify:kGHUnitWaitStatusSuccess forSelector:@selector(testLists)];
   GHAssertTrue([data respondsToSelector:@selector(objectAtIndex:)],nil);
 }
@@ -52,8 +51,6 @@
 - (void)didSignup:(NSDictionary*)data
 {
   [self notify:kGHUnitWaitStatusSuccess forSelector:@selector(testSignup)];
-  NSLog(@"%@",data);
-  //GHAssertTrue([data respondsToSelector:@selector(objectAtIndex:)],nil);
 }
 
 @end

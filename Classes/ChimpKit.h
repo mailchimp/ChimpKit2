@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ChimpKit.h"
 #import "TeePee.h"
 
 @interface ChimpKit : TeePee { }

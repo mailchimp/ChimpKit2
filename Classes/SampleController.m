@@ -13,18 +13,18 @@
 
 - (IBAction)showDialog
 {
-  [ChimpKit setAPIKey:@"1df3dda132dc2338706decdd08198719-us1"];
+  [ChimpKit setAPIKey:@"7d378bf53df21c2319717776d3f6d7bc-us1"];
   
   CKDialogController *dialog = [[CKDialogController alloc] initWithDelegate:self];
 
-  dialog.listID     = @"e892b61220";  
+  dialog.listID     = @"31067f2f53";  
   dialog.onSuccess  = @selector(signupDidSucceed:);
   dialog.onFailure  = @selector(signupDidFail:);
   
   [dialog show];
 }
 
-- (void)signupDidSucceed:(id)data
+- (void)signupDidSucceed:(id)request
 {
   UIAlertView *alert	= [[UIAlertView alloc] initWithTitle:nil 
                                                   message:@"You have been signed up."
@@ -35,10 +35,11 @@
   [alert release];
 }
 
-- (void)signupDidFail:(id)data
+- (void)signupDidFail:(id)request
 {
+  NSDictionary *response = [[request responseString] JSONValue];
   UIAlertView *alert	= [[UIAlertView alloc] initWithTitle:nil 
-                                                  message:[data objectForKey:@"error"]
+                                                  message:[response objectForKey:@"error"]
                                                  delegate:self 
                                         cancelButtonTitle:@"OK" 
                                         otherButtonTitles:nil]; 

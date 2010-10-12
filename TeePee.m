@@ -124,7 +124,7 @@
 - (void)tp_requestDidLoad:(ASIFormDataRequest*)aRequest
 {
   [self.delegate performSelector:self.onSuccess 
-                      withObject:[[aRequest responseString] JSONValue]];
+                      withObject:aRequest];
 }
 - (void)tp_requestDidFail:(ASIFormDataRequest*)aRequest
 {

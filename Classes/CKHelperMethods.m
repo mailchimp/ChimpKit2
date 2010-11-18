@@ -36,9 +36,16 @@
 {
   [self get:@"/" method:@"inlineCss" html:html strip_css:strip];
 }
+
 - (void)ping
 {
   [self get:@"/" method:@"ping"];
+}
+
+- (void)loginWithUsername:(NSString*)username 
+              andPassword:(NSString*)password 
+{
+    [self get:@"/" method:@"login" username:username password:password];
 }
 
 @end

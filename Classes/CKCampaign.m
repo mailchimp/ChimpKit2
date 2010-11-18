@@ -80,5 +80,10 @@
   [self get:@"/" method:@"campaigns" filters:filters start:start limit:limit];
 }
 
+- (void)getGeoOpens:(NSString *)campaignId 
+{
+    [self get:@"/" method:@"campaignGeoOpens" cid:campaignId];
+}
+
 
 @end

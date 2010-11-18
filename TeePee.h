@@ -19,6 +19,7 @@
   ASIFormDataRequest  *request;
   NSString            *baseUri;
   NSMutableDictionary *requestParams;
+  NSDictionary *userInfo;
 }
 
 @property (assign,readwrite)    id  delegate;
@@ -28,6 +29,7 @@
 @property (nonatomic,retain)    ASIFormDataRequest  *request;
 @property (nonatomic,retain)    NSString            *baseUri;
 @property (nonatomic,retain)    NSMutableDictionary *requestParams;
+@property (nonatomic,retain)    NSDictionary *userInfo;
 
 - (id)initWithDelegate:(id)aDelegate;
 /*

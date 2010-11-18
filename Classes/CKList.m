@@ -69,7 +69,13 @@
 - (void)memberInfo:(NSString*)listId 
           forEmail:(NSString*)email
 {
-  [self get:@"/" method:@"listMemberInfo" email_address:email];
+  [self get:@"/" method:@"listMemberInfo" id:listId email_address:email];
+}
+
+- (void)listMembers:(NSString*)listId {
+	[self get:@"/" 
+	   method:@"listMembers" 
+		   id:listId];
 }
 
 - (void)listMembers:(NSString*)listId 
@@ -80,6 +86,7 @@
 {
   [self get:@"/" 
      method:@"listMembers" 
+		 id:listId 
      status:status 
       since:since 
       start:[start stringValue] 
@@ -89,8 +96,9 @@
 - (void)subscribe:(NSString*)listId 
         withEmail:(NSString*)email 
       sendWelcome:(NSString*)welcome
+      doubleOptIn:(NSString*)optIn
 {
-  [self get:@"/" method:@"listSubscribe" id:listId merge_vars:@"" email_address:email send_welcome:welcome];
+    [self get:@"/" method:@"listSubscribe" id:listId merge_vars:@"" email_address:email send_welcome:welcome double_optin:optIn];
 }
 
 - (void)unsubscribe:(NSString*)listId 

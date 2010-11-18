@@ -12,5 +12,6 @@
 @interface ChimpKit : TeePee { }
 
 +(void)setAPIKey:(NSString*)key;
++(NSString *)getAPIKey;
 
 @end

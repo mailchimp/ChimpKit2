@@ -14,7 +14,7 @@
 
 @implementation TeePee
 
-@synthesize delegate, requestQueue, onSuccess, onFailure, request, baseUri, requestParams;
+@synthesize delegate, userInfo, requestQueue, onSuccess, onFailure, request, baseUri, requestParams;
 
 - (id)initWithDelegate:(id)aDelegate
 {
@@ -92,13 +92,20 @@
     if ([param respondsToSelector:@selector(objectForKey:)] || [param respondsToSelector:@selector(objectAtIndex:)]) {
       // handle dictionary & array values
       queryString = [queryString stringByAppendingString:[param toQueryStringWithScope:key]];
-    }else{
-      // handle strings
-      NSString *value = [[params objectForKey:key] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-      queryString     = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",key,value]];
+    } else {
+        // handle strings
+        NSString *value;
+        if ([[params objectForKey:key] respondsToSelector:@selector(stringValue)]) {
+            value = [[params objectForKey:key] stringValue];
+        } else { 
+            value = [params objectForKey:key];
+        }
+        value = [value stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+        value = [value stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
+        queryString = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@=%@&",key,value]];
     }
   }
-  return queryString;
+    return queryString;
 }
 
 - (void)requestForPath:(NSString*)path 
@@ -118,7 +125,8 @@
   [self.request setDelegate:self];
   [self.request setDidFinishSelector:@selector(tp_requestDidLoad:)];
   [self.request setDidFailSelector:@selector(tp_requestDidFail:)];
-  
+  [self.request setUserInfo:self.userInfo];
+  self.userInfo = nil;
 }
 
 - (void)tp_requestDidLoad:(ASIFormDataRequest*)aRequest

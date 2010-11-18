@@ -6,10 +6,11 @@
 //  Copyright 2010 twoism. All rights reserved.
 //
 
+#import "ChimpKit.h"
 #import <Foundation/Foundation.h>
 
 
-@interface CKCampaign : NSObject { }
+@interface CKCampaign : ChimpKit { }
 
 - (void)content:(NSString*)campaignId 
      forArchive:(NSString*)archive;
@@ -41,9 +42,12 @@ segmentOptions:(NSDictionary*)segOptions
                startingAt:(NSNumber*)start 
                 withLimit:(NSNumber*)limit;
 
+- (void)getGeoOpens:(NSString *)campaignId;
+
 @end
 
 @interface CKCampaign(Squelch)
+- (void)get:(NSString *)path method:(NSString *)methodName cid:(NSString*)cid;
 - (void)get:(NSString *)path method:(NSString *)methodName cid:(NSString*)cid for_archive:(NSString*)archive;
 - (void)get:(NSString *)path method:(NSString *)methodName type:(NSString*)type options:(NSDictionary*)opts content:(NSString*)content segment_opts:(NSDictionary*)segOpts type_opts:(NSDictionary*)typeOpts;
 - (void)get:(NSString *)path method:(NSString *)methodName cid:(NSString *)cid name:(NSString*)name value:(NSString*)value;

@@ -16,12 +16,14 @@
 - (void)getAccountDetails;
 - (void)inlineCss:(NSString*)html stripCss:(NSString*)strip;
 - (void)ping;
+- (void)loginWithUsername:(NSString*)username 
+              andPassword:(NSString*)password;
 @end
 
 @interface CKHelperMethods(Squelch)
 - (void)get:(NSString*)path method:(NSString*)methodName;
 - (void)get:(NSString*)path method:(NSString*)methodName type:(NSString*)type content:(NSString*)content;
-- (void)get:(NSString*)path method:(NSString*)methodName;
 - (void)get:(NSString*)path method:(NSString*)methodName html:(NSString*)html strip_css:(NSString*)strip;
+- (void)get:(NSString*)path method:(NSString*)methodname username:(NSString*)username password:(NSString*)password;
 @end
 

@@ -1,3 +1,7 @@
+*** THIS PROJECT IS DEPRECATED ***
+
+Please use [ChimpKit 2](http://github.com/mailchimp/chimpkit2) instead!
+
 ChimpKit
 ---------
 API wrapper for the [mailchimp.com](http://mailchimp.com/api "MailChimp API") API.
